@@ -3,5 +3,5 @@
 ## Install the project dependency
 
 ```shell
-npm unstall
+npm install
 ```
