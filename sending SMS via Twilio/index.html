@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coupon Generator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            width: 100%;
+            background-color: #F2EBE9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+        }
+        h2 {
+            margin-bottom: 30px;
+        }
+        input {
+            padding: 15px 20px;
+            border-radius: 5px;
+            outline: none;
+            width: 60%;
+            margin: 20px 0;
+        } 
+        button {
+            height: 45px;
+            width: 200px;
+            padding: 10px 0;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            color: aliceblue;
+            background-color: rgb(13, 13, 90);
+        }
+    </style>
+</head>
+<body>
+    <h2>Receive coupons</h2>
+    <form method="POST" action="/sent">
+        <label for="number">Enter your phone number - {+ country code and number}</label>
+        <input type="tel" id="number" placeholder="+234-998975216" name="number"/>
+        <button>SUBMIT</button>
+    </form>
+</body>
+</html>

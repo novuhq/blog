@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Discord Bot Creation</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        form {
+            background-color: #f2f0f1;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+        }
+        form > * {
+            margin-bottom: 15px;
+        }
+        textarea {
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+        button {
+            width: 200px;
+            height: 45px;
+            cursor: pointer;
+            background-color: #243A73;
+            color: #fff;
+            outline: none;
+            border: none;
+        
+        }
+    </style>
+
+</head>
+
+<body>
+   <form method="POST" action="/sent">
+       <h2>DISCORD BOT</h2>
+       <label for="message">Send a message to the channel</label>
+       <textarea rows="5" name="message" id="message"></textarea>
+       <button>SEND MESSAGE</button>
+   </form>
+</body>
+
+</html>
