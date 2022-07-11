@@ -3,7 +3,7 @@ const message = document.querySelector("#message")
 const button = document.querySelector("button")
 const header = document.querySelector("#header")
 
-const socket = io("http://localhost:3000")
+const socket = io("http://localhost:8080")
 
 function printMessage(e) {
     e.preventDefault()
