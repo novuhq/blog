@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Sent!</title>
+    <script src="https://kit.fontawesome.com/0c7ff73f65.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <p> Message sent!</p>
+    <div id="notification-bell" style="min-height: 300px; width: 100%">
+        <i class="fa fa-bell"></i>
+        <span id="unseen-badge"></span>
+    </div>
+
+    <script type="module">
+        (function(n,o,t,i,f, m) {
+          n[i] = {}, m = ['init']; n[i]._c = [];m.forEach(me => n[i][me] = function() {n[i]._c.push([me, arguments])});
+          var elt = o.createElement(f); elt.type = "text/javascript"; elt.async = true; elt.src = t;
+          var before = o.getElementsByTagName(f)[0]; before.parentNode.insertBefore(elt, before);
+        })(window, document, 'https://embed.novu.co/embed.umd.min.js', 'novu', 'script');
+      
+        novu.init('<SUBSCRIBER_ID>', '#notification-bell', {
+          subscriberId: "<SUBSCRIBER_ID>",
+          email: "<DEFAULT_EMAIL_ADDRESS>",
+          firstName: "<DEFAULT_FIRST_NAME>",
+          lastName: "<DEFAULT_FIRST_NAME>",
+        });
+      </script>
+</body>
+</html>

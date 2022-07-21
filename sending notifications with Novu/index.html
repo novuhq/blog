@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+  <title>Generating Employment Letter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    form {
+      min-height: 100vh;
+      width: 100%;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    input {
+      padding: 10px;
+      width: 100%;
+      outline: none;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      margin-bottom: 20px;
+    }
+    #button {
+      width: 200px;
+      padding: 20px;
+      outline: none;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 30px;
+      border-radius: 3px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .container {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .container div {
+      width: 45%;
+    }
+    #personnel {
+      margin-top: 30px;
+    }
+    #others div {
+      width: 30%;
+    }
+    
+  </style>
+</head>
+<body>
+    <form method="POST" action="/sent">
+      <h2>Candidate's information</h2>
+      <div class="container">
+          <div>
+            <label for="candidateFirstName">Candidate's First Name</label>
+            <input type="text" name="candidateFirstName" id="candidateFirstName"/>
+          </div>
+
+          <div>
+            <label for="candidateLastName">Candidate's Last Name</label>
+            <input type="text" name="candidateLastName" id="candidateLastName"/>
+          </div>
+      </div>
+
+      <div class="container" id="others">
+          <div>
+            <label for="candidateEmail" >Candidate's Email</label>
+            <input type="email" name="candidateEmail" id="candidateEmail"/>
+          </div>
+
+          <div>
+            <label for="candidateSalary" >Proposed Salary</label>
+            <input type="number" name="candidateSalary" id="candidateSalary"/>
+          </div>
+
+          <div>
+            <label for="candidatePosition" >Proposed Position</label>
+            <input type="text" name="candidatePosition" id="candidatePosition"/>
+          </div>
+      </div>
+      
+      <h2 id="personnel">Official Personnel</h2>
+
+        <div class="container">
+            <div>
+              <label for="officialFullName" >Full Name</label>
+              <input type="text" name="officialFullName" id="officialFullName"/>
+            </div>
+            <div>
+              <label for="officialPosition" >Position Held</label>
+              <input type="text" name="officialPosition" id="officialPosition"/>
+            </div>
+        </div>
+
+        <button id="button">SEND OFFER</button>
+    </form>
+</body>
+</html>
