@@ -1,0 +1,19 @@
+{
+  "messages": [
+    {
+      "text": "Hello!",
+      "name": "nevodavid",
+      "id": "abcd01"
+    },
+    {
+      "text": "Welcome to my chat application!💃🏻",
+      "name": "nevodavid",
+      "id": "defg02"
+    },
+    {
+      "text": "You can start chatting!📲",
+      "name": "nevodavid",
+      "id": "hijk03"
+    }
+  ]
+}
