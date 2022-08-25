@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+* {
+	box-sizing: border-box;
+	font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	align-items: center;
+	height: 10vh;
+	background-color: #cfd2cf;
+	position: sticky;
+	top: 0;
+}
+.logo {
+	height: 7vh;
+	width: 50px;
+	border-radius: 5px;
+}
+.input__container {
+	width: 100%;
+	min-height: 50vh;
+	padding: 15px;
+}
+.input__form {
+	display: flex;
+	width: 70%;
+	flex-direction: column;
+	margin: 0 auto;
+}
+label {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+input {
+	margin-bottom: 15px;
+	padding: 10px;
+	font-size: 16px;
+	outline: none;
+	border: 1px solid #ddd;
+}
+textarea {
+	font-size: 16px;
+	padding: 10px;
+	width: 100%;
+	border-radius: 10px;
+	outline: none;
+	border: 1px solid #ddd;
+	margin-bottom: 15px;
+}
+.sendBtn {
+	padding: 10px;
+	font-size: 16px;
+	height: 45px;
+	width: 200px;
+	cursor: pointer;
+	border: 1px solid #333;
+	outline: none;
+}
+.sendBtn:hover {
+	color: #fff;
+	background-color: #333;
+}
+.articles__container {
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.article {
+	width: 70%;
+	min-height: 300px;
+	padding: 15px;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05),
+		1px 1px 3px 1px rgba(208, 213, 219, 0.28);
+	margin-bottom: 30px;
+	background-color: #fcfffc;
+}
+.article__content {
+	word-spacing: 3px;
+}
+.likeBtn__container {
+	display: flex;
+	align-items: center;
+}
+.likeBtn {
+	color: #fff;
+	cursor: pointer;
+	font-size: 30px;
+	margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+	.article {
+		width: 100%;
+	}
+	.input__form {
+		width: 100%;
+	}
+}
