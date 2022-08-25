@@ -1,6 +1,22 @@
 import React from "react";
+import {
+	NovuProvider,
+	PopoverNotificationCenter,
+	NotificationBell,
+} from "@novu/notification-center";
+import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
+	const navigate = useNavigate();
+
+	const onNotificationClick = (notification) =>
+		navigate(notification.cta.data.url);
+
+	const handleLogOut = () => {
+		localStorage.removeItem("_username");
+		navigate("/");
+	};
+
 	return (
 		<nav className='navbar'>
 			<div>
@@ -10,8 +26,25 @@ const Nav = () => {
 					className='logo'
 				/>
 			</div>
-			<div>
-				<h3>Notification</h3>
+			<div className='notification__container'>
+				<div>
+					<NovuProvider
+						subscriberId='62d1fc97bbe3160014a8cb23'
+						applicationIdentifier='Xr_knh-UYIPD'
+					>
+						<PopoverNotificationCenter
+							onNotificationClick={onNotificationClick}
+							colorScheme='light'
+						>
+							{({ unseenCount }) => (
+								<NotificationBell unseenCount={unseenCount} />
+							)}
+						</PopoverNotificationCenter>
+					</NovuProvider>
+				</div>
+				<button className='logOutBtn' onClick={handleLogOut}>
+					LOG OUT
+				</button>
 			</div>
 		</nav>
 	);

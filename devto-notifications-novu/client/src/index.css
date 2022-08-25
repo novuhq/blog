@@ -8,6 +8,28 @@ body {
 	margin: 0;
 	padding: 0;
 }
+.home {
+	width: 100%;
+	min-height: 100vh;
+	background-color: #cfd2cf;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.home__form {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+}
+.home__cta {
+	padding: 10px;
+	font-size: 16px;
+	cursor: pointer;
+	border: 1px solid #333;
+	outline: none;
+	width: 200px;
+}
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -22,6 +44,21 @@ body {
 	height: 7vh;
 	width: 50px;
 	border-radius: 5px;
+}
+.notification__container {
+	display: flex;
+	align-items: center;
+}
+.notification__container > div {
+	margin-right: 15px;
+}
+.logOutBtn {
+	padding: 10px;
+	width: 150px;
+	color: red;
+	border: 1px solid #333;
+	background-color: #fff;
+	cursor: pointer;
 }
 .input__container {
 	width: 100%;

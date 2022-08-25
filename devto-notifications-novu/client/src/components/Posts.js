@@ -11,7 +11,9 @@ const Posts = ({ posts, postLiked }) => {
 						<p className='article__content'>{post.content}</p>
 						<div className='likeBtn__container'>
 							<p className='likeBtn' onClick={() => postLiked(post.id)}>
-								👍
+								<span role='img' aria-label='like'>
+									👍
+								</span>
 							</p>
 							<p>{post.likes > 0 && post.likes}</p>
 						</div>

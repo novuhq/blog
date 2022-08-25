@@ -12,6 +12,8 @@ const { Novu } = require("@novu/node");
 
 const novu = new Novu("cdaa6070dfc6e6edf820515f19a90627");
 app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 let posts = [];
 
 const increaseLikes = (postId, array) => {
@@ -38,18 +40,21 @@ socketIO.on("connection", (socket) => {
 });
 
 app.get("/api", (req, res) => {
-	res.json({ message: "Hello" });
+	res.json({
+		message: "Hello world",
+	});
 });
 
 app.post("/notify", async (req, res) => {
+	const { username } = req.body;
 	await novu
 		.trigger("on-boarding-notification-DyhJZuHvb", {
 			to: {
 				subscriberId: "62d1fc97bbe3160014a8cb23",
 			},
-		})
-		.then((data) => {
-			console.log(data);
+			payload: {
+				username,
+			},
 		})
 		.catch((err) => console.error(err));
 });
