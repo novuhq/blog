@@ -36,9 +36,9 @@ body {
 	padding: 20px;
 	align-items: center;
 	height: 10vh;
-	background-color: #cfd2cf;
 	position: sticky;
 	top: 0;
+	border-bottom: 1px solid #ddd;
 }
 .logo {
 	height: 7vh;

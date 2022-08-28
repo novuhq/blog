@@ -1,13 +1,16 @@
 import React from "react";
 
-const Posts = ({ posts, postLiked }) => {
+const Posts = ({ posts, socket }) => {
+	const postLiked = (id) => socket.emit("postLiked", id);
+
 	return (
 		<div className='articles__container'>
 			{posts[0] && <h1>Recent Articles</h1>}
 			{posts.length > 0 &&
-				posts.reverse().map((post) => (
+				posts.map((post) => (
 					<div className='article' key={post.id}>
 						<h2>{post.title}</h2>
+
 						<p className='article__content'>{post.content}</p>
 						<div className='likeBtn__container'>
 							<p className='likeBtn' onClick={() => postLiked(post.id)}>
