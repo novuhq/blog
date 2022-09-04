@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+* {
+	box-sizing: border-box;
+	font-family: "Space Grotesk", sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+.app__container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	padding: 30px;
+}
+.clock__container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 20vh;
+	background-color: #f0ebe3;
+	margin-bottom: 30px;
+}
+.clock {
+	font-size: 50px;
+	color: #576f72;
+}
+.createSchedule__container {
+	margin-bottom: 30px;
+	width: 70%;
+}
+form div {
+	margin-bottom: 20px;
+}
+input {
+	margin-left: 20px;
+	padding: 5px;
+	width: 100px;
+}
+#title {
+	width: 70%;
+}
+button {
+	width: 200px;
+	padding: 15px;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	background-color: #576f72;
+	color: #fff;
+	cursor: pointer;
+}
