@@ -9,7 +9,7 @@ const CreateSchedule = ({ socket }) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		socket.emit("newSchedule", { hour, minute, title });
-		toast.success(`It's time for ${title}`);
+		toast.success(`${title} has been added successfully!`);
 		console.log({ hour, minute, title });
 		setHour("");
 		setMinute("");
