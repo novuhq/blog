@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const CreateSchedule = ({ socket }) => {
 	const [hour, setHour] = useState(0);
@@ -8,6 +9,7 @@ const CreateSchedule = ({ socket }) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		socket.emit("newSchedule", { hour, minute, title });
+		toast.success(`It's time for ${title}`);
 		console.log({ hour, minute, title });
 		setHour("");
 		setMinute("");
