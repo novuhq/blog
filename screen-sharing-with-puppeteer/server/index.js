@@ -40,13 +40,14 @@ socketIO.on("connection", (socket) => {
 				await page.goto(data);
 				const screenshotBuffer = await page.screenshot(options);
 				socketIO.emit("imageBuffer", screenshotBuffer);
+				console.log("Screenshot sent! 📸");
 				await browser.close();
 			} catch (err) {
 				console.error("ERROR >>>", err);
 			}
 		}
 		screenshot(url);
-		console.log("Screenshot sent! 📸");
+		
 	});
 
 	socket.on("mousePosition", (position) => {
