@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+* {
+	font-family: "Space Grotesk", sans-serif;
+	box-sizing: border-box;
+}
+.home__container {
+	display: flex;
+	min-height: 55vh;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.home__container h2 {
+	margin-bottom: 30px;
+}
+.createChannelBtn {
+	padding: 15px;
+	width: 200px;
+	cursor: pointer;
+	font-size: 16px;
+	background-color: #277bc0;
+	color: #fff;
+	border: none;
+	outline: none;
+	margin-right: 15px;
+}
+.createChannelBtn:hover {
+	background-color: #fff;
+	border: 1px solid #277bc0;
+	color: #277bc0;
+}
+
+.home__channels {
+	width: 100%;
+	min-height: 45vh;
+	background-color: #9bcbfb;
+	padding: 20px;
+}
+.home__channels h3 {
+	text-align: center;
+}
+.channels__list {
+	width: 70%;
+	margin: 0 auto;
+}
+.channels__item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.channels__item button {
+	padding: 10px;
+	background-color: #fff;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	width: 100px;
+}
+.channels__item button:hover {
+	background-color: #277bc0;
+	color: #fff;
+}
+.channel__navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px;
+	width: 100%;
+	height: 10vh;
+	background-color: #ddd;
+	margin-bottom: 30px;
+}
+.channel__navbar button {
+	width: 180px;
+	padding: 10px;
+	height: 45px;
+	cursor: pointer;
+	color: red;
+	background-color: #fff;
+	border: none;
+	outline: none;
+}
+.form {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 30px;
+}
+.form__input {
+	width: 70%;
+	padding: 10px 15px;
+	margin: 10px 0;
+}
+.form__button {
+	width: 200px;
+	padding: 10px;
+	height: 45px;
+	cursor: pointer;
+	outline: none;
+	border: 1px solid #333;
+}
+.screen__share {
+	height: 800px;
+	width: 100%;
+	border: 1px solid #000;
+	margin-bottom: 30px;
+}
+.login__container {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+}
+.login__form {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+}
+.login__form input {
+	margin-bottom: 15px;
+	padding: 10px 15px;
+}
+@media screen and (max-width: 768px) {
+	.login__form {
+		width: 100%;
+	}
+}
