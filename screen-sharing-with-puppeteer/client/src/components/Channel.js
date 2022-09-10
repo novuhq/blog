@@ -3,23 +3,27 @@ import React, { useState, useEffect, useRef } from "react";
 const Channel = ({ socket }) => {
 	const [URL, setURL] = useState("");
 	const [imageString, setImageString] = useState("");
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState("");
+
 	const cursorRef = useRef();
+
 	const takeScreenshot = (e) => {
 		e.preventDefault();
-		socket.emit("screenshotPage", { url: URL });
+		socket.emit("screenshotPage", URL);
+		setLoading(true);
 		setURL("");
 	};
+
 	useEffect(() => {
 		socket.on("imageBuffer", (data) => {
 			setImageString(btoa(String.fromCharCode(...new Uint8Array(data))));
+			setLoading(false);
 		});
 
-		//Receives mouse position from the server
-		socket.on("setMousePosition", (data) => {
-			// const position = cursorRef.current.getBoundingClientRect();
-			// console.log("POSTION >>>", position);
-			console.log("Positions >>", data);
-		});
+		socket.on("setMousePosition", (data) => console.log("Positions >>", data));
+
+		socket.on("errorBuffer", (err) => setError(err));
 	}, [socket]);
 
 	useEffect(() => {
@@ -33,17 +37,6 @@ const Channel = ({ socket }) => {
 		return () => document.removeEventListener("mousemove", handleMouseMove);
 	}, [socket]);
 
-	// const emitClickOnScreen = (eventName) => (event) => {
-	// 	const position = cursorRef.current.getBoundingClientRect();
-	// 	const widthChange = 1255 / position.width;
-	// 	const heightChange = 800 / position.height;
-	// 	console.log({
-	// 		x: widthChange * (event.pageX - position.left),
-	// 		y:
-	// 			heightChange *
-	// 			(event.pageY - position.top - document.documentElement.scrollTop),
-	// 	});
-	// };
 	return (
 		<div className='channel'>
 			<nav className='channel__navbar'>
@@ -64,16 +57,14 @@ const Channel = ({ socket }) => {
 					/>
 					<button className='form__button'>SCREENSHOT</button>
 				</form>
-				<div className='screen__share' ref={cursorRef}>
-					{imageString && (
-						<img
-							src={`data:image/png;base64,${imageString}`}
-							alt=''
-							// onMouseMove={emitClickOnScreen("move")}
-							// onClick={emitClickOnScreen("click")}
-						/>
-					)}
-				</div>
+				{!loading ? (
+					<div className='screen__share' ref={cursorRef}>
+						<img src={`data:image/png;base64,${imageString}`} alt='' />
+					</div>
+				) : (
+					<p>Take a screenshot...</p>
+				)}
+				{error && <p>{error}</p>}
 			</main>
 		</div>
 	);

@@ -15,6 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 let channelList = [];
+
 socketIO.on("connection", (socket) => {
 	console.log(`⚡: ${socket.id} user just connected!`);
 
@@ -23,12 +24,11 @@ socketIO.on("connection", (socket) => {
 		socket.join(channelDetails.channel);
 		socketIO.emit("channels", channelList);
 	});
-	socket.on("joinChannel", (channel) => {
-		socket.join(channel);
-	});
+
+	socket.on("joinChannel", (channel) => socket.join(channel));
+
 	socket.on("screenshotPage", (data) => {
-		const { url } = data;
-		async function screenshot(data) {
+		async function screenshot(url) {
 			try {
 				const browser = await puppeteer.launch();
 				const page = await browser.newPage();
@@ -37,24 +37,28 @@ socketIO.on("connection", (socket) => {
 					fullPage: true,
 					omitBackground: true,
 				};
-				await page.goto(data);
+				await page.goto(url);
 				const screenshotBuffer = await page.screenshot(options);
+
+				//sends image screenshot as buffer
 				socketIO.emit("imageBuffer", screenshotBuffer);
 				console.log("Screenshot sent! 📸");
 				await browser.close();
 			} catch (err) {
-				console.error("ERROR >>>", err);
+				socket.emit(
+					"errorBuffer",
+					"Unable to screenshot webpage, check your network connection..."
+				);
 			}
 		}
-		screenshot(url);
-		
+		screenshot(data);
 	});
 
-	socket.on("mousePosition", (position) => {
-		//Receives mouse position
-		console.log(position);
-		socketIO.emit("setMousePosition", position);
+	socket.on("mousePosition", (data) => {
+		console.log(data);
+		socketIO.emit("setMousePosition", data);
 	});
+
 	socket.on("disconnect", () => {
 		socket.disconnect();
 		console.log("🔥: A user disconnected");

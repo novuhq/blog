@@ -8,7 +8,6 @@ const Login = ({ socket }) => {
 
 	const handleClick = (e) => {
 		e.preventDefault();
-		localStorage.setItem("username", username);
 		socket.emit("createChannel", { channel, owner: username });
 		navigate(`/channel/${channel}`);
 	};

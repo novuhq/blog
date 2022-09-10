@@ -113,10 +113,14 @@ body {
 	border: 1px solid #333;
 }
 .screen__share {
-	height: 800px;
+	height: min-content;
 	width: 100%;
-	border: 1px solid #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin-bottom: 30px;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05),
+		2px 2px 3px 1px rgba(208, 213, 219, 0.28);
 }
 .login__container {
 	width: 100%;

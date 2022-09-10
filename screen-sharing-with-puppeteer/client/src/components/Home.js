@@ -4,19 +4,18 @@ import { useNavigate } from "react-router-dom";
 const Home = ({ socket }) => {
 	const [channels, setChannels] = useState([]);
 	const navigate = useNavigate();
-	const handleCreateChannel = () => {
-		navigate("/login");
-	};
+
+	const handleCreateChannel = () => navigate("/login");
+
 	const handleJoinChannel = (channel) => {
 		socket.emit("joinChannel", channel);
 		navigate(`/channel/${channel}`);
 	};
+
 	useEffect(() => {
-		socket.on("channels", (data) => {
-			setChannels(data);
-			console.log(data);
-		});
+		socket.on("channels", (data) => setChannels(data));
 	}, [socket]);
+
 	return (
 		<div>
 			<div className='home__container'>
