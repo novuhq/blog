@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from "react";
 const Channel = ({ socket }) => {
 	const [URL, setURL] = useState("");
 	const [imageString, setImageString] = useState("");
-	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState("");
 
 	const cursorRef = useRef();
@@ -11,14 +10,12 @@ const Channel = ({ socket }) => {
 	const takeScreenshot = (e) => {
 		e.preventDefault();
 		socket.emit("screenshotPage", URL);
-		setLoading(true);
 		setURL("");
 	};
 
 	useEffect(() => {
 		socket.on("imageBuffer", (data) => {
 			setImageString(btoa(String.fromCharCode(...new Uint8Array(data))));
-			setLoading(false);
 		});
 
 		socket.on("setMousePosition", (data) => console.log("Positions >>", data));
@@ -57,7 +54,7 @@ const Channel = ({ socket }) => {
 					/>
 					<button className='form__button'>SCREENSHOT</button>
 				</form>
-				{!loading ? (
+				{!imageString ? (
 					<div className='screen__share' ref={cursorRef}>
 						<img src={`data:image/png;base64,${imageString}`} alt='' />
 					</div>
