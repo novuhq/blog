@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+* {
+	font-family: "Space Grotesk", sans-serif;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+.navbar {
+	width: 100%;
+	background-color: #f1f7ee;
+	height: 10vh;
+	border-bottom: 1px solid #ddd;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+}
+.form__input {
+	min-height: 20vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.input {
+	margin: 0 5px;
+	width: 50%;
+	padding: 10px 15px;
+}
+.addTodoBtn {
+	width: 150px;
+	padding: 10px;
+	cursor: pointer;
+	background-color: #367e18;
+	color: #fff;
+	border: none;
+	outline: none;
+	height: 43px;
+}
+.container {
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.completed__wrapper,
+.ongoing__wrapper,
+.pending__wrapper {
+	width: 32%;
+	min-height: 60vh;
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
+}
+.ongoing__wrapper > h3,
+.pending__wrapper > h3,
+.completed__wrapper > h3 {
+	text-align: center;
+	text-transform: capitalize;
+}
+.pending__items {
+	background-color: #eee3cb;
+}
+.ongoing__items {
+	background-color: #d2daff;
+}
+.completed__items {
+	background-color: #7fb77e;
+}
+
+.pending__container,
+.ongoing__container,
+.completed__container {
+	width: 100%;
+	min-height: 55vh;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+.pending__items,
+.ongoing__items,
+.completed__items {
+	width: 100%;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 15px;
+}
+.comment {
+	text-align: right;
+	font-size: 14px;
+	cursor: pointer;
+	color: rgb(85, 85, 199);
+}
+.comment:hover {
+	text-decoration: underline;
+}
+.comments__container {
+	padding: 20px;
+}
+.comment__form {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 30px;
+}
+.comment__form > label {
+	margin-bottom: 15px;
+}
+.comment__form textarea {
+	width: 80%;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+.commentBtn {
+	padding: 10px;
+	width: 200px;
+	background-color: #367e18;
+	outline: none;
+	border: none;
+	color: #fff;
+	height: 45px;
+	cursor: pointer;
+}
+.comments__section {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.login__form {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.login__form > label {
+	margin-bottom: 15px;
+}
+.login__form > input {
+	width: 70%;
+	padding: 10px 15px;
+	margin-bottom: 15px;
+}
+.login__form > button {
+	background-color: #367e18;
+	color: #fff;
+	padding: 15px;
+	cursor: pointer;
+	border: none;
+	font-size: 16px;
+	outline: none;
+	width: 200px;
+}
