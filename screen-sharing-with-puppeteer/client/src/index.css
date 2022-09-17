@@ -34,6 +34,7 @@ body {
 	border: none;
 	outline: none;
 	margin-right: 15px;
+	margin-top: 30px;
 }
 .createChannelBtn:hover {
 	background-color: #fff;
@@ -140,6 +141,26 @@ body {
 	margin-bottom: 15px;
 	padding: 10px 15px;
 }
+.popup {
+	width: 80%;
+	height: 500px;
+	background: black;
+	border-radius: 20px;
+	padding: 20px;
+	overflow: auto;
+}
+.popup-ref {
+	background: white;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.popup-ref img {
+	top: 0;
+	position: sticky;
+	width: 100%;
+}
+
 @media screen and (max-width: 768px) {
 	.login__form {
 		width: 100%;
