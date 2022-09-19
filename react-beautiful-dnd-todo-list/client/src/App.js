@@ -8,7 +8,7 @@ function App() {
 		<div>
 			<Routes>
 				<Route path='/' element={<Login />} />
-				<Route path='/tasks' element={<Task />} />
+				<Route path='/task' element={<Task />} />
 				<Route path='/comments/:category/:id' element={<Comments />} />
 			</Routes>
 		</div>
