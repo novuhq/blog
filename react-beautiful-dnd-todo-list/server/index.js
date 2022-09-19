@@ -3,7 +3,8 @@ const app = express();
 const cors = require("cors");
 const http = require("http").Server(app);
 const PORT = 4000;
-
+const { Novu } = require("@novu/node");
+const novu = new Novu("cdaa6070dfc6e6edf820515f19a90627");
 const socketIO = require("socket.io")(http, {
 	cors: {
 		origin: "http://localhost:3000",
@@ -61,6 +62,21 @@ let tasks = {
 	},
 };
 
+// const sendNotification = async (user) => {
+// 	try {
+// 		const result = await novu.trigger("<TEMPLATE_ID>", {
+// 			to: {
+// 				subscriberId: "<SUBSCRIBER_ID>",
+// 			},
+// 			payload: {
+// 				userId: user,
+// 			},
+// 		});
+// 		console.log(result);
+// 	} catch (err) {
+// 		console.error("Error >>>>", { err });
+// 	}
+// };
 socketIO.on("connection", (socket) => {
 	console.log(`⚡: ${socket.id} user just connected!`);
 
@@ -68,6 +84,9 @@ socketIO.on("connection", (socket) => {
 		const newTask = { id: fetchID(), title: data.task, comments: [] };
 		tasks["pending"].items.push(newTask);
 		socket.emit("tasks", tasks);
+
+		// 👇🏻 sends notification via Novu
+		// sendNotification(data.userId);
 	});
 
 	socket.on("taskDragged", (data) => {
