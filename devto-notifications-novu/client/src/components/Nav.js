@@ -29,8 +29,8 @@ const Nav = () => {
 			<div className='notification__container'>
 				<div>
 					<NovuProvider
-						subscriberId='62d1fc97bbe3160014a8cb23'
-						applicationIdentifier='Xr_knh-UYIPD'
+						subscriberId='<SUBSCRIBER_ID>'
+						applicationIdentifier='<APP_ID>'
 					>
 						<PopoverNotificationCenter
 							onNotificationClick={onNotificationClick}
