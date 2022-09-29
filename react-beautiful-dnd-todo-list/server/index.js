@@ -3,8 +3,8 @@ const app = express();
 const cors = require("cors");
 const http = require("http").Server(app);
 const PORT = 4000;
-const { Novu } = require("@novu/node");
-const novu = new Novu("cdaa6070dfc6e6edf820515f19a90627");
+// const { Novu } = require("@novu/node");
+// const novu = new Novu(<API_KEY>);
 const socketIO = require("socket.io")(http, {
 	cors: {
 		origin: "http://localhost:3000",
