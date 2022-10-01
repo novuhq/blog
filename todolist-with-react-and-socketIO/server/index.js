@@ -18,7 +18,7 @@ let todoList = [];
 // 	try {
 // 		const result = await novu.trigger(template_id, {
 // 			to: {
-// 				subscriberId: "62d1fc97bbe3160014a8cb23",
+// 				subscriberId: "<YOUR_SUBSCRIBER_ID>",
 // 			},
 // 		});
 // 		console.log(result);
@@ -35,7 +35,7 @@ socketIO.on("connection", (socket) => {
 		todoList.unshift(todo);
 		socket.emit("todos", todoList);
 
-		// sendNotification("on-boarding-notification-Gy-PtZY3c");
+		// sendNotification("<TEMPLATE_ID>");
 	});
 
 	socket.on("viewComments", (id) => {
@@ -58,7 +58,7 @@ socketIO.on("connection", (socket) => {
 	socket.on("deleteTodo", (id) => {
 		todoList = todoList.filter((todo) => todo.id !== id);
 		socket.emit("todos", todoList);
-		// sendNotification("on-boarding-notification");
+		// sendNotification("<TEMPLATE_ID>");
 	});
 
 	socket.on("disconnect", () => {
