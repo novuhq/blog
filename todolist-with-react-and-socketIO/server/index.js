@@ -18,7 +18,7 @@ let todoList = [];
 // 	try {
 // 		const result = await novu.trigger(template_id, {
 // 			to: {
-// 				subscriberId: "<YOUR_SUBSCRIBER_ID>",
+// 				subscriberId: "62d1fc97bbe3160014a8cb23",
 // 			},
 // 		});
 // 		console.log(result);
@@ -26,6 +26,7 @@ let todoList = [];
 // 		console.error("Error >>>>", { err });
 // 	}
 // };
+//http://localhost:61931/demo
 
 socketIO.on("connection", (socket) => {
 	console.log(`⚡: ${socket.id} user just connected!`);
@@ -33,14 +34,23 @@ socketIO.on("connection", (socket) => {
 	socket.on("addTodo", (todo) => {
 		todoList.unshift(todo);
 		socket.emit("todos", todoList);
-		// sendNotification("<TEMPLATE_ID>");
+
+		// sendNotification("on-boarding-notification-Gy-PtZY3c");
 	});
 
-	socket.on("editTodo", (id) => {
+	socket.on("viewComments", (id) => {
 		for (let i = 0; i < todoList.length; i++) {
 			if (id === todoList[i].id) {
-				socket.emit("gotTodo", todoList[i]);
-				todoList = todoList.filter((todo) => todo.id !== id);
+				socket.emit("commentsReceived", todoList[i]);
+			}
+		}
+	});
+	socket.on("updateComment", (data) => {
+		const { user, todoID, comment } = data;
+		for (let i = 0; i < todoList.length; i++) {
+			if (todoID === todoList[i].id) {
+				todoList[i].comments.push({ name: user, text: comment });
+				socket.emit("commentsReceived", todoList[i]);
 			}
 		}
 	});
@@ -48,7 +58,7 @@ socketIO.on("connection", (socket) => {
 	socket.on("deleteTodo", (id) => {
 		todoList = todoList.filter((todo) => todo.id !== id);
 		socket.emit("todos", todoList);
-		// sendNotification("<TEMPLATE_ID>");
+		// sendNotification("on-boarding-notification");
 	});
 
 	socket.on("disconnect", () => {
