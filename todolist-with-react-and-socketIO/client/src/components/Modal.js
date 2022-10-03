@@ -1,14 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-const Modal = ({
-	showModal,
-	setShowModal,
-	comments,
-	selectedItemID,
-	socket,
-}) => {
+const Modal = ({ showModal, setShowModal, selectedItemID, socket }) => {
 	const modalRef = useRef();
 	const [comment, setComment] = useState("");
+	const [comments, setComments] = useState([]);
 
 	const closeModal = (e) => {
 		if (modalRef.current === e.target) {
@@ -24,6 +19,9 @@ const Modal = ({
 		});
 		setComment("");
 	};
+	useEffect(() => {
+		socket.on("commentsReceived", (todo) => setComments(todo.comments));
+	}, [socket]);
 
 	return (
 		<div className='modal' onClick={closeModal} ref={modalRef}>

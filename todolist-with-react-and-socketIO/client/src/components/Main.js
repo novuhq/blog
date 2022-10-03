@@ -7,7 +7,6 @@ function Main({ socket }) {
 	const [todoList, setTodoList] = useState([]);
 
 	const [showModal, setShowModal] = useState(false);
-	const [comments, setComments] = useState([]);
 	const [selectedItemID, setSelectedItemID] = useState("");
 
 	const toggleModal = (itemId) => {
@@ -37,7 +36,6 @@ function Main({ socket }) {
 		}
 		fetchTodos();
 		socket.on("todos", (data) => setTodoList(data));
-		socket.on("commentsReceived", (todo) => setComments(todo.comments));
 	}, [socket]);
 
 	const deleteTodo = (id) => socket.emit("deleteTodo", id);
@@ -79,8 +77,6 @@ function Main({ socket }) {
 				<Modal
 					showModal={showModal}
 					setShowModal={setShowModal}
-					comments={comments}
-					setComments={setComments}
 					selectedItemID={selectedItemID}
 					socket={socket}
 				/>
