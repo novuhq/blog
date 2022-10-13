@@ -14,47 +14,16 @@ app.use(express.json());
 app.use(cors());
 
 const generateID = () => Math.random().toString(36).substring(2, 10);
-let chatRooms = [
-	{
-		id: generateID(),
-		name: "Novu Hangouts",
-		messages: [
-			{
-				id: generateID(),
-				text: "Hello guys, welcome!",
-				time: "07:50",
-				user: "Tomer",
-			},
-			{
-				id: generateID(),
-				text: "Hi Tomer, thank you! 😇",
-				time: "08:50",
-				user: "David",
-			},
-		],
-	},
-	{
-		id: generateID(),
-		name: "Hacksquad Team 1",
-		messages: [
-			{
-				id: generateID(),
-				text: "Guys, who's awake? 🙏🏽",
-				time: "12:50",
-				user: "Team Leader",
-			},
-			{
-				id: generateID(),
-				text: "What's up? 🧑🏻‍💻",
-				time: "03:50",
-				user: "Victoria",
-			},
-		],
-	},
-];
+let chatRooms = [];
 
 socketIO.on("connection", (socket) => {
 	console.log(`⚡: ${socket.id} user just connected!`);
+
+	socket.on("createRoom", (name) => {
+		socket.join(name);
+		chatRooms.unshift({ id: generateID(), name, messages: [] });
+		socket.emit("roomsList", chatRooms);
+	});
 
 	socket.on("findRoom", (id) => {
 		let result = chatRooms.filter((room) => room.id == id);
@@ -62,11 +31,7 @@ socketIO.on("connection", (socket) => {
 		socket.emit("foundRoom", result[0].messages);
 		// console.log("Messages Form", result[0].messages);
 	});
-	socket.on("createRoom", (name) => {
-		socket.join(name);
-		chatRooms.unshift({ id: generateID(), name, messages: [] });
-		socket.emit("roomsList", chatRooms);
-	});
+
 	socket.on("newMessage", (data) => {
 		const { room_id, message, user, timestamp } = data;
 		let result = chatRooms.filter((room) => room.id == room_id);
@@ -76,7 +41,7 @@ socketIO.on("connection", (socket) => {
 			user,
 			time: `${timestamp.hour}:${timestamp.mins}`,
 		};
-
+		console.log("New Message", newMessage);
 		socket.to(result[0].name).emit("roomMessage", newMessage);
 		result[0].messages.push(newMessage);
 

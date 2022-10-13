@@ -1,21 +1,28 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import {
-	StyleSheet,
-	View,
-	TextInput,
-	Text,
-	Button,
-	FlatList,
-	Pressable,
-} from "react-native";
-import socket from "../socket";
+import { View, TextInput, Text, FlatList, Pressable } from "react-native";
+import socket from "../utils/socket";
 import MessageComponent from "../component/MessageComponent";
+import { styles } from "../utils/styles";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Messaging = ({ route, navigation }) => {
-	const { name, id, user } = route.params;
+	const [user, setUser] = useState("");
+	const { name, id } = route.params;
 
 	const [chatMessages, setChatMessages] = useState([]);
 	const [message, setMessage] = useState("");
+
+	const getUsername = async () => {
+		try {
+			const value = await AsyncStorage.getItem("username");
+			if (value !== null) {
+				setUser(value);
+			}
+		} catch (e) {
+			console.error("Error while loading username!");
+		}
+	};
+
 	const handleNewMessage = () => {
 		const hour =
 			new Date().getHours() < 10
@@ -27,15 +34,19 @@ const Messaging = ({ route, navigation }) => {
 				? `0${new Date().getMinutes()}`
 				: `${new Date().getMinutes()}`;
 
-		socket.emit("newMessage", {
-			message,
-			room_id: id,
-			user,
-			timestamp: { hour, mins },
-		});
+		if (user) {
+			socket.emit("newMessage", {
+				message,
+				room_id: id,
+				user,
+				timestamp: { hour, mins },
+			});
+		}
 	};
+
 	useLayoutEffect(() => {
 		navigation.setOptions({ title: name });
+		getUsername();
 		socket.emit("findRoom", id);
 		socket.on("foundRoom", (roomChats) => setChatMessages(roomChats));
 	}, []);
@@ -43,10 +54,14 @@ const Messaging = ({ route, navigation }) => {
 	useEffect(() => {
 		socket.on("foundRoom", (roomChats) => setChatMessages(roomChats));
 	}, [socket]);
+
 	return (
-		<View style={styles.screen}>
+		<View style={styles.messagingscreen}>
 			<View
-				style={[styles.screen, { paddingVertical: 15, paddingHorizontal: 10 }]}
+				style={[
+					styles.messagingscreen,
+					{ paddingVertical: 15, paddingHorizontal: 10 },
+				]}
 			>
 				{chatMessages[0] ? (
 					<FlatList
@@ -61,12 +76,15 @@ const Messaging = ({ route, navigation }) => {
 				)}
 			</View>
 
-			<View style={styles.inputContainer}>
+			<View style={styles.messaginginputContainer}>
 				<TextInput
-					style={styles.input}
+					style={styles.messaginginput}
 					onChangeText={(value) => setMessage(value)}
 				/>
-				<Pressable style={styles.buttonContainer} onPress={handleNewMessage}>
+				<Pressable
+					style={styles.messagingbuttonContainer}
+					onPress={handleNewMessage}
+				>
 					<View>
 						<Text style={{ color: "#f2f0f1", fontSize: 20 }}>SEND</Text>
 					</View>
@@ -77,44 +95,3 @@ const Messaging = ({ route, navigation }) => {
 };
 
 export default Messaging;
-
-const styles = StyleSheet.create({
-	screen: {
-		flex: 1,
-	},
-	messageWrapper: { width: "100%", alignItems: "flex-end", marginBottom: 15 },
-	message: {
-		maxWidth: "50%",
-		backgroundColor: "rgb(194, 243, 194)",
-		padding: 15,
-		borderRadius: 10,
-		marginBottom: 2,
-	},
-	avatar: {
-		marginRight: 5,
-	},
-	inputContainer: {
-		width: "100%",
-		minHeight: 100,
-		backgroundColor: "white",
-		paddingVertical: 30,
-		paddingHorizontal: 15,
-		justifyContent: "center",
-		flexDirection: "row",
-	},
-	input: {
-		borderWidth: 1,
-		padding: 15,
-		flex: 1,
-		marginRight: 10,
-		borderRadius: 20,
-	},
-	buttonContainer: {
-		width: "30%",
-		backgroundColor: "green",
-		borderRadius: 3,
-		alignItems: "center",
-		justifyContent: "center",
-		borderRadius: 50,
-	},
-});
