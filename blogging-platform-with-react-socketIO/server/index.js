@@ -10,7 +10,7 @@ const socketIO = require("socket.io")(http, {
 });
 const { Novu } = require("@novu/node");
 
-const novu = new Novu("cdaa6070dfc6e6edf820515f19a90627");
+const novu = new Novu("<YOUR_API_KEY>");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -30,7 +30,7 @@ const sendUsersNotification = (users, sender) => {
 const novuNotify = async (user, i, sender) => {
 	try {
 		await novu
-			.trigger("notifyusers", {
+			.trigger("<YOUR_TEMPLATE_ID>", {
 				to: {
 					subscriberId: user.id,
 					firstName: user.text,
