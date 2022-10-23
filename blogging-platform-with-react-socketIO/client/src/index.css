@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "Space Grotesk", sans-serif;
+}
+body {
+	padding: 0;
+}
+.login {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.login > h2 {
+	color: #00abb3;
+	margin-bottom: 30px;
+}
+.loginForm {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+}
+.loginForm > input {
+	margin: 10px 0;
+	padding: 10px 15px;
+}
+.home__navbar {
+	width: 100%;
+	height: 10vh;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #eaeaea;
+}
+.home__navbar > h2 {
+	color: #00abb3;
+}
+.home__buttons {
+	display: flex;
+	align-items: center;
+	justify-content: baseline;
+}
+.home__createBtn {
+	padding: 10px;
+	cursor: pointer;
+	margin-right: 10px;
+	background-color: #00abb3;
+	border: none;
+	outline: none;
+	color: #fff;
+}
+.home__createBtn:hover,
+.createForm__button:hover {
+	background-color: #02595e;
+}
+.home__notifyBtn {
+	padding: 10px;
+	cursor: pointer;
+	color: #00abb3;
+	background-color: #fff;
+	border: 1px solid #3c4048;
+	outline: none;
+	width: 100px;
+}
+.posts__container {
+	width: 100%;
+	min-height: 90vh;
+	padding: 30px 20px;
+}
+.post {
+	width: 100%;
+	min-height: 8vh;
+	background-color: #00abb3;
+	border-radius: 5px;
+	padding: 20px;
+	display: flex;
+	color: #eaeaea;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+.post__cta {
+	padding: 10px;
+	background-color: #fff;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	border-radius: 2px;
+}
+.createPost {
+	min-height: 100vh;
+	width: 100%;
+	padding: 30px 20px;
+}
+.createPost > h2 {
+	text-align: center;
+	color: #00abb3;
+}
+.createForm {
+	width: 100%;
+	min-height: 80vh;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.createForm__title {
+	padding: 10px;
+	height: 45px;
+	margin-bottom: 10px;
+	text-transform: capitalize;
+	border: 1px solid #3c4048;
+}
+.createForm__content {
+	padding: 15px;
+	margin-bottom: 15px;
+	border: 1px solid #3c4048;
+}
+.createForm__button {
+	width: 200px;
+	padding: 10px;
+	height: 45px;
+	background-color: #00abb3;
+	color: #fff;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.blogPost {
+	width: 100%;
+	min-height: 100vh;
+	background-color: #eaeaea;
+	display: flex;
+	flex-direction: column;
+	padding: 30px 50px;
+}
+.blogPost__container {
+	width: 90%;
+	min-height: 70vh;
+	margin-bottom: 30px;
+}
+.blogPost__author {
+	color: #00abb3;
+}
+.blogPost__date {
+	opacity: 0.4;
+	font-size: 12px;
+}
+.blogPost__content {
+	padding-top: 30px;
+	line-height: 200%;
+}
+.comments__container {
+	min-height: 70vh;
+	border: 1px solid #3c4048;
+	padding: 30px;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05),
+		2px 2px 3px 1px rgba(208, 213, 219, 0.28);
+	border-radius: 3px;
+}
+.comments__inputContainer {
+	display: flex;
+	align-items: center;
+	margin: 30px 0;
+}
+.comments__input {
+	width: 50%;
+	padding: 15px;
+	margin-right: 15px;
+}
+.comments__cta,
+.login__cta {
+	padding: 15px;
+	width: 200px;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	background-color: #00abb3;
+	color: #fff;
+}
+.comment {
+	margin-bottom: 15px;
+}
+.ReactTags__tags react-tags-wrapper,
+.ReactTags__tagInput {
+	width: 100%;
+}
+.ReactTags__selected span.ReactTags__tag {
+	border: 1px solid #ddd;
+	background: #00abb3;
+	color: white;
+	font-size: 12px;
+	display: inline-block;
+	padding: 5px;
+	margin: 0 5px;
+	border-radius: 2px;
+	min-width: 100px;
+}
+
+.ReactTags__selected button.ReactTags__remove {
+	color: #fff;
+	margin-left: 15px;
+	cursor: pointer;
+	background-color: orangered;
+	padding: 0 10px;
+	border: none;
+	outline: none;
+}
+
+.ReactTags__tagInput input.ReactTags__tagInputField,
+.ReactTags__tagInput input.ReactTags__tagInputField:focus {
+	margin: 10px 0;
+	font-size: 12px;
+	width: 100%;
+	padding: 10px;
+	height: 45px;
+	text-transform: capitalize;
+	border: 1px solid #3c4048;
+}
+
+.ReactTags__selected span.ReactTags__tag {
+	border: 1px solid #ddd;
+	background: #63bcfd;
+	color: white;
+	font-size: 12px;
+	display: inline-block;
+	padding: 5px;
+	margin: 0 5px;
+	border-radius: 2px;
+}
+.ReactTags__selected a.ReactTags__remove {
+	color: #aaa;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+/* Styles for suggestions */
+.ReactTags__suggestions {
+	position: absolute;
+}
+.ReactTags__suggestions ul {
+	list-style-type: none;
+	box-shadow: 0.05em 0.01em 0.5em rgba(0, 0, 0, 0.2);
+	background: white;
+	width: 200px;
+}
+.ReactTags__suggestions li {
+	border-bottom: 1px solid #ddd;
+	padding: 5px 10px;
+	margin: 0;
+}
+.ReactTags__suggestions li mark {
+	text-decoration: underline;
+	background: none;
+	font-weight: 600;
+}
+.ReactTags__suggestions ul li.ReactTags__activeSuggestion {
+	background: #fff;
+	cursor: pointer;
+}
+
+.ReactTags__remove {
+	border: none;
+	cursor: pointer;
+	background: none;
+	color: white;
+}
