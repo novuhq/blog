@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Space Grotesk", sans-serif;
+}
+input {
+	height: 45px;
+	padding: 10px 15px;
+	margin-bottom: 15px;
+}
+button {
+	width: 200px;
+	outline: none;
+	border: none;
+	padding: 15px;
+	cursor: pointer;
+	font-size: 16px;
+}
+.login__container,
+.signup__container,
+.verify,
+.dashboard {
+	width: 100%;
+	min-height: 100vh;
+	padding: 50px 70px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.login__form,
+.verify__form,
+.signup__form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.loginBtn,
+.signupBtn,
+.codeBtn {
+	background-color: green;
+	color: #fff;
+	margin-bottom: 15px;
+}
+.signOutBtn {
+	background-color: #c21010;
+	color: #fff;
+}
+.link {
+	cursor: pointer;
+	color: rgb(39, 147, 39);
+}
+.code {
+	width: 50%;
+	text-align: center;
+	text-transform: uppercase;
+}
+.verify__form {
+	align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+	.login__container,
+	.signup__container,
+	.verify {
+		padding: 30px;
+	}
+}
