@@ -15,8 +15,8 @@ const Notify = () => {
 	return (
 		<div>
 			<NovuProvider
-				subscriberId='62d1fc97bbe3160014a8cb23'
-				applicationIdentifier='Xr_knh-UYIPD'
+				subscriberId='<YOUR_SUBSCRIBER_ID>'
+				applicationIdentifier='<APP_ID>'
 			>
 				<PopoverNotificationCenter
 					onNotificationClick={onNotificationClick}
