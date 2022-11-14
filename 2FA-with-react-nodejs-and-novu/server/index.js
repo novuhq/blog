@@ -4,7 +4,7 @@ const app = express();
 const PORT = 4000;
 const { Novu } = require("@novu/node");
 
-const novu = new Novu("cdaa6070dfc6e6edf820515f19a90627");
+const novu = new Novu("<YOUR_API_KEY>");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -18,7 +18,7 @@ const generateCode = () => Math.random().toString(36).substring(2, 12);
 
 const sendNovuNotification = async (recipient, verificationCode) => {
 	try {
-		let response = await novu.trigger("sendsms", {
+		let response = await novu.trigger("<NOTIFICATION_TEMPLATE>", {
 			to: {
 				subscriberId: recipient,
 				phone: recipient,
