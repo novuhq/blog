@@ -8,18 +8,24 @@ import MyPhotos from "./components/MyPhotos";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import SharePhoto from "./components/SharePhoto";
+import { io } from "socket.io-client";
 
 const App = () => {
+	const socket = io.connect("http://localhost:4000");
+
 	return (
 		<>
 			<BrowserRouter>
 				<Routes>
-					<Route path='/' element={<Login />} />
-					<Route path='/register' element={<Register />} />
-					<Route path='/photos' element={<Photos />} />
-					<Route path='/photo/upload' element={<UploadPhoto />} />
-					<Route path='/user/photos' element={<MyPhotos />} />
-					<Route path='/share/:user' element={<SharePhoto />} />
+					<Route path='/' element={<Login socket={socket} />} />
+					<Route path='/register' element={<Register socket={socket} />} />
+					<Route path='/photos' element={<Photos socket={socket} />} />
+					<Route
+						path='/photo/upload'
+						element={<UploadPhoto socket={socket} />}
+					/>
+					<Route path='/user/photos' element={<MyPhotos socket={socket} />} />
+					<Route path='/share/:user' element={<SharePhoto socket={socket} />} />
 				</Routes>
 			</BrowserRouter>
 			<ToastContainer />

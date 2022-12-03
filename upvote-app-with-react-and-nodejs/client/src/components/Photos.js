@@ -1,37 +1,29 @@
 import React, { useEffect, useState } from "react";
 import Nav from "./Nav";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import PhotoContainer from "./PhotoContainer";
 
-const Home = () => {
+const Home = ({ socket }) => {
 	const navigate = useNavigate();
 	const [photos, setPhotos] = useState([]);
-	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		if (!localStorage.getItem("_id")) {
+		if (!localStorage.getItem("_id") && !localStorage.getItem("_myEmail")) {
 			navigate("/");
 		}
 	}, [navigate]);
 
 	useEffect(() => {
-		function fetchPhotos() {
-			axios
-				.get("http://localhost:4000/photo/all")
-				.then((data) => {
-					setPhotos(data.data.photos);
-					setLoading(false);
-				})
-				.catch((err) => console.error(err));
-		}
-		fetchPhotos();
-	}, []);
+		socket.emit("allPhotos", "search");
+		socket.on("allPhotosMessage", (data) => {
+			setPhotos(data.photos);
+		});
+	}, [socket]);
 
 	return (
 		<div>
 			<Nav />
-			<PhotoContainer loading={loading} photos={photos} />
+			<PhotoContainer photos={photos} socket={socket} />
 		</div>
 	);
 };

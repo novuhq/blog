@@ -1,42 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-const Login = () => {
+const Login = ({ socket }) => {
 	const navigate = useNavigate();
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 
-	async function POSTDetails() {
-		try {
-			const request = await fetch("http://localhost:4000/login", {
-				method: "POST",
-				body: JSON.stringify({
-					username,
-					password,
-				}),
-				headers: {
-					Accept: "application/json",
-					"Content-Type": "application/json",
-				},
-			});
-			const data = await request.json();
-			if (data.error_message) {
-				toast.error(data.error_message);
-			} else {
-				toast.success(data.message);
-				localStorage.setItem("_id", data.data._id);
-				localStorage.setItem("_myEmail", data.data._email);
-				navigate("/photos");
-			}
-		} catch (err) {
-			console.error(err);
-		}
-	}
+	useEffect(() => {
+		socket.on("loginSuccess", (data) => {
+			toast.success(data.message);
+			localStorage.setItem("_id", data.data._id);
+			localStorage.setItem("_myEmail", data.data._email);
+			navigate("/photos");
+		});
+		socket.on("loginError", (error) => {
+			toast.error(error);
+		});
+	}, [socket, navigate]);
+
 	const handleSignIn = (e) => {
 		if (username.trim() && password.trim()) {
 			e.preventDefault();
-			POSTDetails();
+			socket.emit("login", { username, password });
 			setPassword("");
 			setUsername("");
 		}

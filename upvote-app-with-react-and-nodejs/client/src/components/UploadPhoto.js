@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import { toast } from "react-toastify";
 
-const UploadPhoto = () => {
+const UploadPhoto = ({ socket }) => {
 	const navigate = useNavigate();
-	const [photo, setPhoto] = useState(null);
+	const [photoURL, setPhotoURL] = useState("");
 
 	useEffect(() => {
 		if (!localStorage.getItem("_id")) {
@@ -13,43 +12,31 @@ const UploadPhoto = () => {
 		}
 	}, [navigate]);
 
+	useEffect(() => {
+		socket.on("uploadPhotoMessage", (data) => {
+			toast.success(data);
+			navigate("/photos");
+		});
+	}, [socket, navigate]);
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const id = localStorage.getItem("_id");
 		const email = localStorage.getItem("_myEmail");
-		const formData = new FormData();
-		formData.append("fileImage", photo, photo.name);
-		formData.append("_id", id);
-		formData.append("_email", email);
-		axios
-			.post("http://localhost:4000/photo/upload", formData, {})
-			.then((res) => {
-				if (res.error_message) {
-					toast.error(res.error_message);
-				} else {
-					toast.success(res.message);
-					navigate("/photos");
-				}
-			});
-		e.preventDefault();
+		socket.emit("uploadPhoto", { id, email, photoURL });
 	};
 
 	return (
 		<main className='uploadContainer'>
 			<div className='uploadText'>
 				<h2>Upload Image</h2>
-				<form
-					method='POST'
-					onSubmit={handleSubmit}
-					encType='multipart/form-data'
-				>
-					<label>Select File</label>
+				<form method='POST' onSubmit={handleSubmit}>
+					<label>Paste the image URL</label>
 					<input
-						type='file'
-						accept='image/*'
+						type='text'
 						name='fileImage'
-						id='fileImage'
-						onChange={(e) => setPhoto(e.target.files[0])}
+						value={photoURL}
+						onChange={(e) => setPhotoURL(e.target.value)}
 					/>
 					<button className='uploadBtn'>UPLOAD</button>
 				</form>

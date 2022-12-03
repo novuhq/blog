@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
 import Nav from "./Nav";
 import PhotoContainer from "./PhotoContainer";
 
-const SharePhoto = () => {
+const SharePhoto = ({ socket }) => {
 	const navigate = useNavigate();
 	const [photos, setPhotos] = useState([]);
-	const [loading, setLoading] = useState(true);
 	const { user } = useParams();
 
 	useEffect(() => {
@@ -16,23 +14,20 @@ const SharePhoto = () => {
 			if (!id) {
 				navigate("/");
 			} else {
-				axios
-					.get(`http://localhost:4000/photo/share/${user}`)
-					.then((res) => {
-						setPhotos(res.data.data);
-						setLoading(false);
-					})
-					.catch((err) => console.error(err));
+				socket.emit("sharePhoto", user);
 			}
 		}
 		authenticateUser();
-	}, [navigate, user]);
+	}, [socket, navigate, user]);
+
+	useEffect(() => {
+		socket.on("sharePhotoMessage", (data) => setPhotos(data));
+	}, [socket]);
 
 	return (
 		<div>
 			<Nav />
-
-			<PhotoContainer loading={loading} photos={photos} />
+			<PhotoContainer socket={socket} photos={photos} />
 		</div>
 	);
 };

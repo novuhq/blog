@@ -1,44 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const Register = () => {
+const Register = ({ socket }) => {
 	const navigate = useNavigate();
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 	const [email, setEmail] = useState("");
 
-	async function POSTDetails() {
-		try {
-			const request = await fetch("http://localhost:4000/register", {
-				method: "POST",
-				body: JSON.stringify({
-					email,
-					username,
-					password,
-				}),
-				headers: {
-					Accept: "application/json",
-					"Content-Type": "application/json",
-				},
-			});
-			const data = await request.json();
-			if (data.error_message) {
-				toast.error(data.error_message);
-			} else {
-				toast.success(data.message);
-				navigate("/");
-			}
-		} catch (err) {
-			console.error(err);
-			toast.error("Account creation failed");
-		}
-	}
+	useEffect(() => {
+		socket.on("registerSuccess", (data) => {
+			toast.success(data);
+			navigate("/");
+		});
+		socket.on("registerError", (error) => {
+			toast.error(error);
+		});
+	}, [socket, navigate]);
+
 	const handleRegister = (e) => {
 		e.preventDefault();
 		if (username.trim() && password.trim() && email.trim()) {
-			POSTDetails();
+			socket.emit("register", { username, email, password });
 			setPassword("");
 			setUsername("");
 			setEmail("");

@@ -144,12 +144,16 @@ button {
 	align-items: center;
 	justify-content: center;
 }
+.uploadText {
+	width: 80%;
+}
 .uploadText form {
 	display: flex;
 	flex-direction: column;
 }
-.uploadText form > * {
-	margin-bottom: 10px;
+
+input {
+	padding: 10px 15px;
 }
 .uploadText > h2 {
 	margin-bottom: 20px;
