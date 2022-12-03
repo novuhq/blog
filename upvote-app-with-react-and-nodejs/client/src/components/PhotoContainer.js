@@ -2,8 +2,30 @@ import axios from "axios";
 import React from "react";
 import { MdOutlineArrowUpward } from "react-icons/md";
 import { toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
 
 const PhotoContainer = ({ loading, photos }) => {
+	const sendEmail = (owner_email) => {
+		emailjs
+			.send(
+				"service_david",
+				"template_1",
+				{
+					to_email: owner_email,
+					from_email: localStorage.getItem("_myEmail"),
+				},
+				"user_emwhAtdfUc9GKCk1hhf89"
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
+	};
+
 	const handleUpvote = (id) => {
 		axios
 			.post("http://localhost:4000/photo/upvote", {
@@ -13,6 +35,7 @@ const PhotoContainer = ({ loading, photos }) => {
 			.then((res) => {
 				if (res.data.message) {
 					toast.success(res.data.message);
+					sendEmail(res.data.item[0]._ref);
 				} else {
 					toast.error(res.data.error_message);
 				}

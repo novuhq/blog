@@ -26,6 +26,7 @@ const Login = () => {
 			} else {
 				toast.success(data.message);
 				localStorage.setItem("_id", data.data._id);
+				localStorage.setItem("_myEmail", data.data._email);
 				navigate("/photos");
 			}
 		} catch (err) {

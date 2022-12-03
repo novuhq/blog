@@ -43,6 +43,7 @@ app.post("/login", (req, res) => {
 		message: "Login successfully",
 		data: {
 			_id: result[0].id,
+			_email: result[0].email,
 		},
 	});
 });
@@ -70,15 +71,13 @@ app.post("/photo/upload", upload.single("fileImage"), (req, res) => {
 		image_url: `http://localhost:4000/uploads/${req.file.filename}`,
 		vote_count: 0,
 		votedUsers: [],
+		_ref: req.body._email,
 	};
 
 	result[0]?.images.unshift(newImage);
 
 	res.json({
 		message: "Image upload Successfully",
-		// data: {
-		// 	_id: result[0],
-		// },
 	});
 });
 

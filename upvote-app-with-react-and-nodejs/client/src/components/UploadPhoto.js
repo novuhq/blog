@@ -16,9 +16,11 @@ const UploadPhoto = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const id = localStorage.getItem("_id");
+		const email = localStorage.getItem("_myEmail");
 		const formData = new FormData();
 		formData.append("fileImage", photo, photo.name);
 		formData.append("_id", id);
+		formData.append("_email", email);
 		axios
 			.post("http://localhost:4000/photo/upload", formData, {})
 			.then((res) => {
