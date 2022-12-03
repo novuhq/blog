@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Space Grotesk", sans-serif;
+	color: #2b3a55;
+}
+body {
+	padding: 0;
+	margin: 0;
+}
+button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.navbar {
+	width: 100%;
+	min-height: 10vh;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #f2e5e5;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.nav__BtnGroup a,
+.nav__BtnGroup button {
+	padding: 15px;
+	width: 200px;
+	font-size: 16px;
+	cursor: pointer;
+	outline: none;
+	background-color: #fff;
+	border: none;
+	border-radius: 3px;
+	text-decoration: none;
+}
+.nav__BtnGroup a {
+	margin-right: 10px;
+}
+.nav__BtnGroup a:hover,
+.nav__BtnGroup button:hover {
+	background-color: #ce7777;
+	color: #fff;
+}
+.login,
+.register {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.login__form,
+.register__form {
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+}
+.input {
+	padding: 12px 10px;
+	margin-bottom: 20px;
+	border-radius: 4px;
+	border: 1px solid #e8c4c4;
+}
+.loginBtn,
+.registerBtn {
+	padding: 15px;
+	font-size: 16px;
+	cursor: pointer;
+	background-color: #f2e5e5;
+	color: #2b3a55;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+.loginBtn:hover,
+.registerBtn:hover {
+	background-color: #ce7777;
+	color: #fff;
+}
+.link {
+	color: #ce7777;
+	cursor: pointer;
+	text-decoration: none;
+}
+.photoContainer {
+	width: 100%;
+	min-height: 90vh;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.photoContainer > * {
+	margin: 15px;
+}
+.photo {
+	width: 300px;
+	height: 350px;
+	position: relative;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px 0 rgba(99, 99, 99, 0.2);
+}
+.imageContainer {
+	width: 100%;
+	position: relative;
+	height: 100%;
+}
+.photo__image {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	object-fit: cover;
+	border-radius: 10px;
+}
+.upvoteIcon {
+	background-color: #fff;
+	padding: 10px 20px;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	cursor: pointer;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.upvoteIcon:hover {
+	background-color: #f2e5e5;
+}
+
+.uploadContainer {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.uploadText form {
+	display: flex;
+	flex-direction: column;
+}
+.uploadText form > * {
+	margin-bottom: 10px;
+}
+.uploadText > h2 {
+	margin-bottom: 20px;
+}
+.uploadBtn {
+	margin-top: 20px;
+	padding: 10px;
+	background-color: #ce7777;
+	color: #fff;
+}
+.copyDiv {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.copyContainer {
+	margin-top: 20px;
+	padding: 15px;
+	cursor: pointer;
+	background-color: #ce7777;
+	border-radius: 5px;
+}
