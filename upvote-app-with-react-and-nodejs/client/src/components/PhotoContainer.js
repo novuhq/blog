@@ -8,13 +8,13 @@ const PhotoContainer = ({ loading, photos }) => {
 	const sendEmail = (owner_email) => {
 		emailjs
 			.send(
-				"service_david",
-				"template_1",
+				'YOUR_SERVICE_ID',
+				'YOUR_TEMPLATE_ID',
 				{
 					to_email: owner_email,
 					from_email: localStorage.getItem("_myEmail"),
 				},
-				"user_emwhAtdfUc9GKCk1hhf89"
+				'YOUR_PUBLIC_KEY'
 			)
 			.then(
 				(result) => {
