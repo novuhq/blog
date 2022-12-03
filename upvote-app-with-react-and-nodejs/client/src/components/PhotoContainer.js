@@ -7,13 +7,13 @@ const PhotoContainer = ({ photos, socket }) => {
 	const sendEmail = (email) => {
 		emailjs
 			.send(
-				"service_david",
-				"template_1",
+				'YOUR_SERVICE_ID',
+				'YOUR_TEMPLATE_ID',
 				{
 					to_email: email,
 					from_email: localStorage.getItem("_myEmail"),
 				},
-				"user_emwhAtdfUc9GKCk1hhf89"
+				'YOUR_PUBLIC_KEY'
 			)
 			.then(
 				(result) => {
