@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Space Grotesk", sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: #c58940;
+	cursor: pointer;
+}
+input,
+textarea {
+	padding: 15px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+label {
+	margin-bottom: 5px;
+}
+button {
+	cursor: pointer;
+	outline: none;
+	border: none;
+	padding: 10px;
+}
+.login,
+.login__form,
+.signup,
+.signup__form {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.login__form input,
+.signup__form input {
+	width: 70%;
+}
+.login__title,
+.signup__title {
+	margin-bottom: 30px;
+}
+.loginButton,
+.signupButton {
+	width: 200px;
+	padding: 15px;
+	background-color: #e6ddc4;
+}
+.dashboard__nav {
+	background-color: #c58940;
+	height: 10vh;
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logout__btn,
+.dashboard__heading button {
+	padding: 15px;
+	width: 150px;
+	margin-right: 15px;
+	background-color: #faf8f1;
+}
+.logout__btn:hover {
+	background-color: #faeab1;
+}
+.dashboard__main {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.dashboard__heading {
+	display: flex;
+	margin-bottom: 25px;
+	align-items: center;
+	justify-content: space-between;
+}
+.timezone__wrapper {
+	width: 50%;
+}
+.saveBtn__container {
+	width: 100%;
+	padding: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.saveBtn__container button {
+	width: 200px;
+	padding: 15px;
+	background-color: #faeab1;
+}
+.form {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+}
+.select__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 15px;
+}
+select {
+	padding: 10px;
+	min-width: 150px;
+}
+.profile {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+table {
+	border: 1px solid #ddd;
+	width: 100%;
+	border-collapse: collapse;
+}
+tr,
+td {
+	border: 1px solid #ddd;
+	padding: 20px;
+}
+.bookContainer {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+}
+.booking__form {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 80%;
+	margin: 0 auto;
+}
+.bookTitle {
+	margin-bottom: 30px;
+	color: #c58940;
+}
+.bookingBtn {
+	margin-top: 20px;
+	background-color: #c58940;
+	color: #fff;
+}
+.errorContainer {
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	padding: 30px;
+	justify-content: center;
+	flex-direction: column;
+}
