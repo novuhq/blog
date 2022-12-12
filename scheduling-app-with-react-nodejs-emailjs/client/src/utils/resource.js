@@ -134,8 +134,8 @@ export const sendEmail = (
 ) => {
 	emailjs
 		.send(
-			"service_david",
-			"template_1",
+			"YOUR_SERVICE_ID",
+                "YOUR_TEMPLATE_ID",
 			{
 				to_email: receiverEmail,
 				from_email: email,
@@ -143,7 +143,7 @@ export const sendEmail = (
 				message,
 				duration,
 			},
-			"user_emwhAtdfUc9GKCk1hhf89"
+			"YOUR_PUBLIC_KEY"
 		)
 		.then(
 			(result) => {
