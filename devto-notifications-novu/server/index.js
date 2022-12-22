@@ -10,7 +10,7 @@ const socketIO = require("socket.io")(http, {
 });
 const { Novu } = require("@novu/node");
 
-const novu = new Novu("cdaa6070dfc6e6edf820515f19a90627");
+const novu = new Novu("YOUR_API_KEY");
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -48,9 +48,9 @@ app.get("/api", (req, res) => {
 app.post("/notify", async (req, res) => {
 	const { username } = req.body;
 	await novu
-		.trigger("on-boarding-notification-DyhJZuHvb", {
+		.trigger("TEMPLATE_ID", {
 			to: {
-				subscriberId: "62d1fc97bbe3160014a8cb23",
+				subscriberId: "SUBSCRIBER_ID",
 			},
 			payload: {
 				username,
