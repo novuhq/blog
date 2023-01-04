@@ -7,7 +7,7 @@ const cors = require("cors");
 import { ChatGPTAPIBrowser } from "chatgpt";
 const { Novu } = require("@novu/node");
 
-const novu = new Novu("cdaa6070dfc6e6edf820515f19a90627");
+const novu = new Novu("<YOUR_API_KEY>");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -18,8 +18,8 @@ let chatgptResult = "";
 async function chatgptFunction(message, subscriberId, firstName, res) {
 	// use puppeteer to bypass cloudflare (headful because of captchas)
 	const api = new ChatGPTAPIBrowser({
-		email: "asaoludavid234@yahoo.com",
-		password: "davidasaolu",
+		email: "<YOUR_CHATGPT_EMAIL>",
+		password: "<YOUR_CHATGPT_PASSWORD>",
 	});
 	await api.initSession();
 	const result = await api.sendMessage(message);
@@ -31,7 +31,7 @@ async function chatgptFunction(message, subscriberId, firstName, res) {
 
 async function sendNotification(data, subscriberId, res) {
 	try {
-		let result = await novu.trigger("subscriber_notification", {
+		let result = await novu.trigger("<YOUR_TEMPLATE_ID>", {
 			to: {
 				subscriberId: subscriberId,
 			},
