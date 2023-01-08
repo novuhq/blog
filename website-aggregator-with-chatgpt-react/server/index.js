@@ -23,8 +23,8 @@ const generateID = () => Math.random().toString(36).substring(2, 10);
 async function chatgptFunction(content) {
 	// use puppeteer to bypass cloudflare (headful because of captchas)
 	const api = new ChatGPTAPIBrowser({
-		email: "asaoludavid234@yahoo.com",
-		password: "davidasaolu",
+		email: "YOUR_CHATGPT_EMAIL_ADDRESS",
+		password: "YOUR_CHATGPT_PASSWORD",
 	});
 	await api.initSession();
 
