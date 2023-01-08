@@ -17,6 +17,9 @@ app.get("/api", (req, res) => {
 	});
 });
 
+const database = [];
+const generateID = () => Math.random().toString(36).substring(2, 10);
+
 async function chatgptFunction(content) {
 	// use puppeteer to bypass cloudflare (headful because of captchas)
 	const api = new ChatGPTAPIBrowser({
@@ -26,10 +29,10 @@ async function chatgptFunction(content) {
 	await api.initSession();
 
 	const getBrandName = await api.sendMessage(
-		`I have a raw text of a website, can you extract the brand name from the text, without writing anything else? raw text: ${content}`
+		`I have a raw text of a website, what is the brand name in a single word? ${content}`
 	);
 	const getBrandDescription = await api.sendMessage(
-		`I have a raw text of a website, can you extract the description of the website from the raw text: ${content}`
+		`I have a raw text of a website, can you extract the description of the website from the raw text. I need only the description and nothing else. ${content}`
 	);
 	return {
 		brandName: getBrandName.response,
@@ -60,9 +63,11 @@ app.post("/api/url", (req, res) => {
 
 		let result = await chatgptFunction(websiteContent);
 		result.brandImage = websiteOgImage;
+		result.id = generateID();
+		database.push(result);
 		return res.json({
 			message: "Request successful!",
-			result,
+			database,
 		});
 
 		await browser.close();

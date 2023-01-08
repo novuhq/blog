@@ -4,7 +4,7 @@ import Loading from "./Loading";
 const App = () => {
 	const [url, setURL] = useState("");
 	const [loading, setLoading] = useState(false);
-	const [websiteContent, setWebsiteContent] = useState({});
+	const [websiteContent, setWebsiteContent] = useState([]);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -28,7 +28,8 @@ const App = () => {
 			const data = await request.json();
 			if (data.message) {
 				setLoading(false);
-				setWebsiteContent(data.result);
+				setWebsiteContent(data.database);
+				console.log(data);
 			}
 		} catch (err) {
 			console.error(err);
@@ -51,18 +52,15 @@ const App = () => {
 				/>
 				<button onClick={handleSubmit}>ADD WEBSITE</button>
 			</form>
-			{!loading && websiteContent.brandName && (
-				<main className='website__container'>
-					<div className='website__item'>
-						<img
-							src={websiteContent?.brandImage}
-							alt={websiteContent?.brandName}
-						/>
-						<h3>{websiteContent?.brandName}</h3>
-						<p>{websiteContent?.brandDescription}</p>
+			<main className='website__container '>
+				{websiteContent.map((item) => (
+					<div className='website__item' key={item.id}>
+						<img src={item?.brandImage} alt={item?.brandName} />
+						<h3>{item?.brandName}</h3>
+						<p>{item?.brandDescription}</p>
 					</div>
-				</main>
-			)}
+				))}
+			</main>
 		</div>
 	);
 };

@@ -44,13 +44,12 @@ button {
 	min-height: 50vh;
 	border-radius: 5px;
 	display: flex;
-	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	padding: 15px;
 }
 .website__item {
-	width: 80%;
+	width: 35%;
 	margin: 10px;
 	background-color: #f7f7f7;
 	border-radius: 5px;
