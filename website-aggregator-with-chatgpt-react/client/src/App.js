@@ -12,6 +12,8 @@ const App = () => {
 		setURL("");
 		sendURL();
 	};
+	const trimDescription = (content) =>
+		content.match(/(?:"[^"]*"|^[^"]*$)/)[0].replace(/"/g, "");
 
 	async function sendURL() {
 		try {
@@ -57,7 +59,7 @@ const App = () => {
 					<div className='website__item' key={item.id}>
 						<img src={item?.brandImage} alt={item?.brandName} />
 						<h3>{item?.brandName}</h3>
-						<p>{item?.brandDescription}</p>
+						<p>{trimDescription(item?.brandDescription)}</p>
 					</div>
 				))}
 			</main>
