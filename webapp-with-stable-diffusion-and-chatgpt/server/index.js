@@ -17,8 +17,8 @@ const database = [];
 async function chatgptFunction(content) {
 	try {
 		const api = new ChatGPTAPIBrowser({
-			email: "asaoludavid234@yahoo.com",
-			password: "davidasaolu",
+			email: "<YOUR_CHATGPT_EMAIL>",
+			password: "<YOUR_CHATGPT_PASSWORD>",
 		});
 		await api.initSession();
 
