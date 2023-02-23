@@ -1,6 +1,6 @@
 const express = require("express");
 const { Novu, TriggerRecipientsTypeEnum } = require("@novu/node");
-const novu = new Novu("cdaa6070dfc6e6edf820515f19a90627");
+const novu = new Novu("<API_KEY>");
 const cors = require("cors");
 const app = express();
 const PORT = 4000;
