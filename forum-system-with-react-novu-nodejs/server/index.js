@@ -1,5 +1,5 @@
 const express = require("express");
-const { Novu, TriggerRecipientsTypeEnum } = require("@novu/node");
+const { Novu } = require("@novu/node");
 const novu = new Novu("<API_KEY>");
 const cors = require("cors");
 const app = express();
