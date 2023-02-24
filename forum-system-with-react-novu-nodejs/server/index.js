@@ -1,6 +1,6 @@
 const express = require("express");
 const { Novu } = require("@novu/node");
-const novu = new Novu("<API_KEY>");
+const novu = new Novu("<YOUR_API_KEY>");
 const cors = require("cors");
 const app = express();
 const PORT = 4000;
@@ -65,13 +65,15 @@ app.post("/api/create/thread", async (req, res) => {
 	});
 	const getUserId = users.filter((user) => user.username === username);
 
-	const result = await novu.topics.create({
+	await novu.topics.create({
 		key: id,
 		name: thread,
 	});
 
-	const response = await novu.topics.addSubscribers(id, {
+	await novu.topics.addSubscribers(id, {
 		subscribers: [getUserId[0].id],
+		//replace with your subscriber ID to test run
+		// subscribers: ["<YOUR_SUBSCRIBER_ID>"],
 	});
 
 	res.json({
@@ -118,12 +120,6 @@ app.post("/api/create/reply", async (req, res) => {
 	const result = threadList.filter((thread) => thread.id === id);
 	const username = users.filter((user) => user.username === userId);
 	result[0].replies.unshift({ name: username[0].username, text: reply });
-
-	const response = await novu.topics.addSubscribers(id, {
-		subscribers: [username[0].id],
-		//you may test run with your subscriber ID
-		subscribers: ["<YOUR_SUBSCRIBER_ID>"],
-	});
 
 	await novu.trigger("topicnotification", {
 		to: [{ type: "Topic", topicKey: id }],
