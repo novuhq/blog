@@ -6,7 +6,7 @@ const Likes = ({ numberOfLikes, threadId }) => {
 			method: "POST",
 			body: JSON.stringify({
 				threadId,
-				userId: localStorage.getItem("_username"),
+				username: localStorage.getItem("_username"),
 			}),
 			headers: {
 				"Content-Type": "application/json",
