@@ -89,11 +89,11 @@ app.get("/api/all/threads", (req, res) => {
 });
 
 app.post("/api/thread/like", (req, res) => {
-	const { threadId, userId } = req.body;
+	const { threadId, username } = req.body;
 	const result = threadList.filter((thread) => thread.id === threadId);
 	const threadLikes = result[0].likes;
 	const authenticateReaction = threadLikes.filter(
-		(thread) => thread === userId
+		(thread) => thread === username
 	);
 	if (authenticateReaction.length === 0) {
 		threadLikes.push(userId);
