@@ -93,10 +93,10 @@ app.post("/api/thread/like", (req, res) => {
 	const result = threadList.filter((thread) => thread.id === threadId);
 	const threadLikes = result[0].likes;
 	const authenticateReaction = threadLikes.filter(
-		(thread) => thread === username
+		(user) => user === username
 	);
 	if (authenticateReaction.length === 0) {
-		threadLikes.push(userId);
+		threadLikes.push(username);
 		return res.json({
 			message: "You've reacted to the post!",
 		});
