@@ -32,7 +32,6 @@ const SendResume = () => {
 						recruiter_email,
 						my_email,
 						applicant_name,
-						resume,
 					} = res.data;
 					emailjs
 						.send(
@@ -43,7 +42,6 @@ const SendResume = () => {
 								applicant_name,
 								recruiter_email,
 								my_email,
-								resume,
 							},
 							"<PUBLIC_KEY>"
 						)
