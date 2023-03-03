@@ -39,7 +39,6 @@ const database = [];
 let workArray = [];
 let applicantName = "";
 let technologies = "";
-let resume_URL = "";
 
 const GPTFunction = async (text) => {
 	const response = await openai.createCompletion({
@@ -74,12 +73,11 @@ app.post("/resume/create", upload.single("headshotImage"), async (req, res) => {
 	workArray = JSON.parse(workHistory);
 	applicantName = fullName;
 	technologies = currentTechnologies;
-	resume_URL = `http://localhost:4000/uploads/${req.file.filename}`;
 
 	const newEntry = {
 		id: generateID(),
 		fullName,
-		image_url: resume_URL,
+		image_url: `http://localhost:4000/uploads/${req.file.filename}`,
 		currentPosition,
 		currentLength,
 		currentTechnologies,
@@ -132,7 +130,6 @@ app.post("/resume/send", async (req, res) => {
 		recruiter_email: recruiterEmail,
 		my_email: myEmail,
 		applicant_name: applicantName,
-		resume: resume_URL,
 	});
 });
 
