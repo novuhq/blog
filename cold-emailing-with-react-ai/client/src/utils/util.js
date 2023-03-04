@@ -17,8 +17,8 @@ const sendResume = (formData, setLoading, navigate) => {
 				} = res.data.data;
 				emailjs
 					.send(
-						"service_david",
-						"template_w4olgwm",
+						"YOUR_SERVICE_ID",
+						"TEMPLATE_ID",
 						{
 							cover_letter,
 							applicant_name,
@@ -26,7 +26,7 @@ const sendResume = (formData, setLoading, navigate) => {
 							my_email,
 							resume,
 						},
-						"user_emwhAtdfUc9GKCk1hhf89"
+						"YOUR_PUBLIC_KEY"
 					)
 					.then((res) => {
 						if (res.status === 200) {
