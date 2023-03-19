@@ -89,7 +89,7 @@ query {
 
 		const filterArray = allPulls.repository.pullRequests.nodes.filter(
 			(n) =>
-				moment(n.createdAt).add(1, 'year').isAfter(moment()) &&
+				moment(n.createdAt).add(1, 'month').isAfter(moment()) &&
 				n?.author?.url?.indexOf('/apps/') === -1 &&
 				n?.author?.url
 		);
@@ -101,7 +101,7 @@ query {
 			})),
 			...(allPulls.repository.pullRequests.nodes.length &&
 			moment(allPulls.repository.pullRequests.nodes.slice(-1)[0].createdAt)
-				.add(1, 'year')
+				.add(1, 'month')
 				.isAfter(moment()) &&
 			allPulls.repository.pullRequests.pageInfo.hasNextPage
 				? await GitHubAPI.topContributorOfRepository(
@@ -120,7 +120,7 @@ query {
 		const loadContributors: Array<{login: string; avatarUrl: string}> = [];
 		for (const org of orgs) {
 			loadContributors.push(
-				...(await GitHubAPI.topContributorOfRepository(org))
+				...(await GitHubAPI.topContributorOfRepository(org)).filter(f => f.login.toLowerCase().indexOf('nevo') > -1)
 			);
 		}
 

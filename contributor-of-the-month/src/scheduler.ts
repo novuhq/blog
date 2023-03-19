@@ -31,9 +31,7 @@ const startProcess = async () => {
 		composition,
 		serveUrl: bundleLocation,
 		codec: 'h264',
-		outputLocation: 'out/contributor.mp4',
+		outputLocation: 'out/contributor.gif',
 		inputProps: topContributor,
 	});
 };
-
-startProcess();
