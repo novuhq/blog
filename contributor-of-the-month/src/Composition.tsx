@@ -1,6 +1,6 @@
 import {AbsoluteFill, Img, staticFile} from 'remotion';
 import {Confetti} from 'remotion-confetti';
-import {ConfettiConfig} from 'remotion-confetti/index';
+import {ConfettiConfig} from 'remotion-confetti';
 import {FC} from 'react';
 
 const confettiConfig1: ConfettiConfig = {

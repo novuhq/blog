@@ -1,7 +1,6 @@
 import {Octokit} from '@octokit/rest';
 import {IOrganizationResponse, IGetOrgProps} from './typings';
 import moment from 'moment';
-import {config} from 'dotenv';
 
 export class GitHubAPI {
 	static rest: Octokit;
