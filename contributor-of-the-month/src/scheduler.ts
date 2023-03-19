@@ -30,7 +30,7 @@ const startProcess = async () => {
 	await renderMedia({
 		composition,
 		serveUrl: bundleLocation,
-		codec: 'h264',
+		codec: 'gif',
 		outputLocation: 'out/contributor.gif',
 		inputProps: topContributor,
 	});

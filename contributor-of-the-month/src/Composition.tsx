@@ -25,7 +25,9 @@ export const MyComposition: FC<{avatarUrl: string; name: string}> = (props) => {
 						fontSize: 200,
 						color: 'white',
 						float: 'left',
-						textShadow: '10px 10px 50px #000'
+						textShadow: '10px 10px 50px #000',
+						marginTop: -10,
+						marginLeft: -100
 					}}
 				>
 					{name}
@@ -34,13 +36,12 @@ export const MyComposition: FC<{avatarUrl: string; name: string}> = (props) => {
 			<AbsoluteFill
 				style={{
 					background: 'white',
-					width: 600,
+					width: 630,
 					height: 600,
 					borderRadius: '100%',
 					position: 'absolute',
-					left: '50%',
-					top: '50%',
-					transform: 'translate(-50%, -50%)',
+					left: 910,
+					top: 225,
 					overflow: 'hidden',
 				}}
 			>
@@ -48,8 +49,8 @@ export const MyComposition: FC<{avatarUrl: string; name: string}> = (props) => {
 			</AbsoluteFill>
 			<Img
 				src={staticFile('background-contributor.png')}
-				width={2400}
-				height={1350}
+				width={2548}
+				height={1068}
 			/>
 		</AbsoluteFill>
 	);

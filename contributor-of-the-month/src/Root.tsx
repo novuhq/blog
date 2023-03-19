@@ -9,11 +9,11 @@ export const RemotionRoot: React.FC = () => {
 				component={MyComposition}
 				durationInFrames={300}
 				fps={30}
-				width={2400}
-				height={1350}
+				width={2548}
+				height={1068}
 				defaultProps={{
-					avatarUrl: 'https://avatars.githubusercontent.com/u/39879720?v=4',
-					name: 'Diwash',
+					avatarUrl: 'https://avatars.githubusercontent.com/u/100117126?v=4',
+					name: 'Nevo David',
 				}}
 			/>
 		</>

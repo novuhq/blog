@@ -120,7 +120,7 @@ query {
 		const loadContributors: Array<{login: string; avatarUrl: string}> = [];
 		for (const org of orgs) {
 			loadContributors.push(
-				...(await GitHubAPI.topContributorOfRepository(org)).filter(f => f.login.toLowerCase().indexOf('nevo') > -1)
+				...(await GitHubAPI.topContributorOfRepository(org))
 			);
 		}
 
