@@ -1,0 +1,77 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: "Rubik", sans-serif;
+	padding: 0;
+}
+.main {
+	padding: 25px 50px;
+}
+.header {
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+}
+.form {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 70%;
+	margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+	.form {
+		width: 100%;
+		margin: 0;
+	}
+
+	.main {
+		padding: 20px;
+	}
+}
+.input {
+	padding: 10px 15px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.addBtn {
+	margin-top: 30px;
+	padding: 10px;
+	cursor: pointer;
+	outline: none;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background-color: rgb(100, 175, 100);
+	color: #fff;
+}
+.submitBtn {
+	margin-top: 30px;
+	padding: 20px;
+	cursor: pointer;
+	font-size: 16px;
+	outline: none;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background-color: rgb(45, 144, 45);
+	color: #fff;
+}
+.textInput {
+	min-width: 400px;
+	background-color: #f9f5f6;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+	margin-right: 20px;
+}
+.textInput p {
+	padding: 10px 15px;
+	outline: none;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	width: 100%;
+	background-color: #fff;
+}
