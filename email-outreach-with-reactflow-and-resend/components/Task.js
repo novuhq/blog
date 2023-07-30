@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Handle, Position } from "reactflow";
 import { useSelector, useDispatch } from "react-redux";
 import { setNodes, updateNodeValue } from "../redux/nodes";
-const handleStyle = { left: 10 };
 
 export default function Task({ id }) {
 	const initialNodes = useSelector((state) => state.nodes.nodes);
@@ -37,12 +36,6 @@ export default function Task({ id }) {
 			</div>
 
 			<Handle type='source' position={Position.Bottom} id='a' />
-			<Handle
-				type='source'
-				position={Position.Bottom}
-				id='b'
-				style={handleStyle}
-			/>
 		</>
 	);
 }

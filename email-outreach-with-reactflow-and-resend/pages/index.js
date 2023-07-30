@@ -1,101 +1,53 @@
 import Head from "next/head";
 import { useState, useCallback, useMemo, useEffect } from "react";
-import ReactFlow, {
-	useNodesState,
-	useEdgesState,
-	getIncomers,
-	getOutgoers,
-	addEdge,
-	getConnectedEdges,
-} from "reactflow";
+import ReactFlow, { useNodesState, useEdgesState, addEdge } from "reactflow";
 import "reactflow/dist/style.css";
 import Task from "../components/Task";
 import { useSelector } from "react-redux";
 
 export default function Home() {
-	const initialNodes = useSelector((state) => state.nodes.nodes);
-	const initialEdges = useSelector((state) => state.nodes.edges);
 	const [email, setEmail] = useState("");
 	const [subject, setSubject] = useState("");
-	const nodeTypes = useMemo(() => ({ task: Task }), []);
+	const initialNodes = useSelector((state) => state.nodes.nodes);
+	const initialEdges = useSelector((state) => state.nodes.edges);
 	const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
 	const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+	const nodeTypes = useMemo(() => ({ task: Task }), []);
 
 	useEffect(() => {
 		setNodes(initialNodes);
 		setEdges(initialEdges);
 	}, [initialNodes, setNodes, initialEdges, setEdges]);
+
 	const onConnect = useCallback(
 		(params) => setEdges((eds) => addEdge(params, eds)),
 		[setEdges]
 	);
 
-	const onNodesDelete = useCallback(
-		(deleted) => {
-			setEdges(
-				deleted.reduce((acc, node) => {
-					const incomers = getIncomers(node, nodes, edges);
-					const outgoers = getOutgoers(node, nodes, edges);
-					const connectedEdges = getConnectedEdges([node], edges);
-
-					const remainingEdges = acc.filter(
-						(edge) => !connectedEdges.includes(edge)
-					);
-
-					const createdEdges = incomers.flatMap(({ id: source }) =>
-						outgoers.map(({ id: target }) => ({
-							id: `${source}->${target}`,
-							source,
-							target,
-						}))
-					);
-
-					return [...remainingEdges, ...createdEdges];
-				}, edges)
-			);
-		},
-		[nodes, edges, setEdges]
-	);
-
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		sendAtIntervals();
+		sendEmail();
 		setEmail("");
 		setSubject("");
 	};
 
-	const sendAtIntervals = () => {
-		let index = 0;
-		// const interval = 1800000; // 30 minutes in milliseconds
-		const interval = 3000;
-
-		const logNextValue = () => {
-			if (index < nodes.length) {
-				sendEmail(index);
-				index++;
-				setTimeout(logNextValue, interval);
-			}
-		};
-		logNextValue();
-	};
-
-	const sendEmail = (index) => {
+	const sendEmail = () => {
 		fetch("/api/send", {
 			method: "POST",
 			body: JSON.stringify({
 				email,
 				subject,
-				task: nodes[index].data.value,
+				tasks: nodes,
 			}),
 			headers: {
 				"Content-Type": "application/json",
 			},
 		})
 			.then((data) => {
-				alert(`Message ${index + 1} delivered!`);
+				alert(`Sent for processing!`);
 			})
 			.catch((err) => {
-				alert(`Encountered an error when message${index} ❌`);
+				alert(`Encountered an error when message ❌`);
 				console.error(err);
 			});
 	};
@@ -142,7 +94,6 @@ export default function Home() {
 							nodes={nodes}
 							edges={edges}
 							onNodesChange={onNodesChange}
-							onNodesDelete={onNodesDelete}
 							onEdgesChange={onEdgesChange}
 							onConnect={onConnect}
 							nodeTypes={nodeTypes}
