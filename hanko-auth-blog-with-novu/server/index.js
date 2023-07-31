@@ -4,7 +4,7 @@ const { Novu } = require("@novu/node");
 const app = express();
 const PORT = 4000;
 
-const novu = new Novu("cdaa6070dfc6e6edf820515f19a90627");
+const novu = new Novu(<YOUR_API_KEY>);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -51,7 +51,7 @@ const notify = async (reaction, userID) => {
 	});
 	const response = await novu.trigger("notify", {
 		to: {
-			subscriberId: "62d1fc97bbe3160014a8cb23",
+			subscriberId: <YOUR_SUBSCRIBER_ID>,
 		},
 		payload: {
 			reaction,
