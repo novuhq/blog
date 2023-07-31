@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Hanko } from "@teamhanko/hanko-elements";
 import { addNewPost, formatDate } from "../utils.js/util";
-const hankoApi = "https://cb84013f-ba52-4f53-a92e-b4c9c20d9883.hanko.io";
+const hankoApi = "<YOUR_HANKO_API_KEY>";
 
 const NewPost = () => {
 	const navigate = useNavigate();
