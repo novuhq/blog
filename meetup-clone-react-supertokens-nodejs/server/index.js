@@ -23,8 +23,8 @@ supertokens.init({
 	framework: "express",
 	supertokens: {
 		connectionURI:
-			"https://st-dev-a4cb4c60-36a3-11ee-8629-2371ff8cb221.aws.supertokens.io",
-		apiKey: "-wyvnU4oe98AHHuhQQGqsNCN4P",
+			"<YOUR_CONNECTION_URI>",
+		apiKey: "<YOUR_SUPERTOKENS_API_KEY>",
 	},
 	appInfo: {
 		appName: "meetup-clone",
