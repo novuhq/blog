@@ -13,8 +13,8 @@ function Novu() {
 	return (
 		<>
 			<NovuProvider
-				subscriberId='62d1fc97bbe3160014a8cb23'
-				applicationIdentifier='Xr_knh-UYIPD'
+				subscriberId='<YOUR_NOVU_SUBSCRIBER_ID>'
+				applicationIdentifier='<YOUR_NOVU_APP_ID>'
 			>
 				<PopoverNotificationCenter
 					onNotificationClick={onNotificationClick}
