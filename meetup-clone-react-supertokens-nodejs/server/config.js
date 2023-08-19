@@ -1,5 +1,5 @@
 const { Novu } = require("@novu/node");
-const novu = new Novu("cdaa6070dfc6e6edf820515f19a90627");
+const novu = new Novu("<YOUR_NOVU_API_KEY>");
 
 const createSlug = (text) => {
 	let slug = text
@@ -17,7 +17,7 @@ const addCommentNotification = async (userID) => {
 	});
 	const response = await novu.trigger("newComment", {
 		to: {
-			subscriberId: "62d1fc97bbe3160014a8cb23",
+			subscriberId: "<YOUR_NOVU_SUBSCRIBER_ID>",
 		},
 	});
 	return response.data.data;
@@ -29,7 +29,7 @@ const newRegistrationNotification = async (userID) => {
 	});
 	const response = await novu.trigger("newRegistration", {
 		to: {
-			subscriberId: "62d1fc97bbe3160014a8cb23",
+			subscriberId: "<YOUR_NOVU_SUBSCRIBER_ID>",
 		},
 	});
 	return response.data.data;
@@ -38,7 +38,7 @@ const newRegistrationNotification = async (userID) => {
 const newEventNotification = async (eventTitle, category) => {
 	const response = await novu.trigger("newEvent", {
 		to: {
-			subscriberId: "62d1fc97bbe3160014a8cb23",
+			subscriberId: "<YOUR_NOVU_SUBSCRIBER_ID>",
 		},
 		payload: {
 			title: eventTitle,
