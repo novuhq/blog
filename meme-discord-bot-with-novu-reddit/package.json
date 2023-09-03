@@ -12,7 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "@novu/node": "^0.18.0",
-    "discord.js": "^14.13.0",
     "fast-xml-parser": "^4.2.7",
     "node-cron": "^3.0.2",
     "nodemon": "^3.0.1"
