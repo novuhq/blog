@@ -1,7 +1,8 @@
 <!--
---- Readme.md Snippet without images Start ---
+&lt;--- Readme.md Snippet without images Start ---&gt;
 ## Tech Stack
 novuhq/blog is built on the following main stack:
+
 - [Firebase](https://firebase.google.com/) – Realtime Backend / API
 - [Twilio](http://www.twilio.com) – Voice and SMS
 - [Python](https://www.python.org) – Languages
@@ -28,11 +29,13 @@ novuhq/blog is built on the following main stack:
 - [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd) – JavaScript Framework Components
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet without images End ---
 
---- Readme.md Snippet with images Start ---
+&lt;--- Readme.md Snippet without images End ---&gt;
+
+&lt;--- Readme.md Snippet with images Start ---&gt;
 ## Tech Stack
 novuhq/blog is built on the following main stack:
+
 - <img width='25' height='25' src='https://img.stackshare.io/service/116/cZLxNFZS.jpg' alt='Firebase'/> [Firebase](https://firebase.google.com/) – Realtime Backend / API
 - <img width='25' height='25' src='https://img.stackshare.io/service/130/VrwpNfjh_400x400.png' alt='Twilio'/> [Twilio](http://www.twilio.com) – Voice and SMS
 - <img width='25' height='25' src='https://img.stackshare.io/service/993/pUBY5pVj.png' alt='Python'/> [Python](https://www.python.org) – Languages
@@ -59,14 +62,15 @@ novuhq/blog is built on the following main stack:
 - <img width='25' height='25' src='https://img.stackshare.io/service/9878/react-beautiful-dnd-logo.png' alt='react-beautiful-dnd'/> [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd) – JavaScript Framework Components
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet with images End ---
+
+&lt;--- Readme.md Snippet with images End ---&gt;
 -->
 <div align="center">
 
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [novuhq/blog](https://github.com/novuhq/blog)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|62<br/>Tools used|11/09/23 <br/>Report generated|
+|62<br/>Tools used|01/04/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -373,4 +377,4 @@ Full tech stack [here](/techstack.md)
 <br/>
 <div align='center'>
 
-Generated via [Stack File](https://github.com/apps/stack-file)
+Generated via [Stack File](https://github.com/marketplace/stack-file)
