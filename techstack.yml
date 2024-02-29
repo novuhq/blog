@@ -2,7 +2,7 @@ repo_name: novuhq/blog
 report_id: 315753cea2b681e00d72d2f26a253a6f
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-05T09:22:46+00:00'
+timestamp: '2024-02-29T18:06:21+00:00'
 requested_by: dha-stix
 provider: github
 branch: main
@@ -79,7 +79,7 @@ tools:
   last_updated_by: David Asaolu
   last_updated_on: 2022-10-31 15:48:44.000000000 Z
 - name: Next.js
-  description: 'A small framework for server-rendered universal JavaScript apps '
+  description: A small framework for server-rendered universal JavaScript apps
   website_url: https://nextjs.org/
   version: 13.4.2
   open_source: true
@@ -260,7 +260,7 @@ tools:
   last_updated_by: Nevo David
   last_updated_on: 2023-03-19 09:24:17.000000000 Z
 - name: Prettier
-  description: 'Prettier is an opinionated code formatter. '
+  description: Prettier is an opinionated code formatter.
   website_url: https://prettier.io/
   version: 2.8.4
   license: MIT
@@ -659,6 +659,13 @@ tools:
   detection_source: sending-emails-via-Nodemailer/package.json
   last_updated_by: dha-stix
   last_updated_on: 2022-07-11 06:43:01.000000000 Z
+  vulnerabilities:
+  - name: nodemailer ReDoS when trying to send a specially crafted email
+    cve_id: 
+    cve_url: https://github.com/advisories/GHSA-9h6g-pr28-7cqp
+    detected_date: Feb 1
+    severity: moderate
+    first_patched: 6.9.9
 - name: postcss
   description: Tool for transforming styles with JS plugins
   package_url: https://www.npmjs.com/postcss
