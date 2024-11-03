@@ -56,21 +56,21 @@ Examples:
 
 - **WhatsApp**: Ideal for transactional messages, appointment reminders, and customer service, WhatsApp notifications allow businesses to maintain a personal touch and reach users directly on their mobile devices.
     
-    ![WhatsApp notification (Source: Infobip)](./A%20Developer’s%20Guide%20to%20Choosing%20the%20Best%20Notificat%20cc05724f1574487880bee9a8d0edd966/Whatsapp.png)
+    ![WhatsApp notification (Source: Infobip)](https://github.com/novuhq/blog/blob/main/2024/Nov/MCID-188/media-assets/Whatsapp.png?raw=true)
     
 
 - **Discord**: Popular among gaming communities and tech-focused organizations, Discord notifications are perfect for community updates, event reminders, or server alerts.
     
-    ![Discord Notifications](./A%20Developer’s%20Guide%20to%20Choosing%20the%20Best%20Notificat%20cc05724f1574487880bee9a8d0edd966/13225-a3f1aa2bf408c541884162518a5a3039.png)
+    ![Discord Notifications](https://github.com/novuhq/blog/blob/main/2024/Nov/MCID-188/media-assets/Discord-Notifications.png?raw=true)
 
 
 - **Slack**: Frequently used by businesses for team communication, Slack notifications keep teams informed on project updates, system alerts, and urgent messages.
     
-    ![Slack Notifications](./A%20Developer’s%20Guide%20to%20Choosing%20the%20Best%20Notificat%20cc05724f1574487880bee9a8d0edd966/Slack-notifications.png)
+    ![Slack Notifications](https://github.com/novuhq/blog/blob/main/2024/Nov/MCID-188/media-assets/Slack-notifications.png?raw=true)
     
 - **Microsoft Teams**: A preferred choice for corporate environments, Microsoft Teams notifications are excellent for meeting reminders, project updates, and real-time collaboration, seamlessly integrating with Office 365.
     
-    ![Microsoft Teams Notifications](./A%20Developer’s%20Guide%20to%20Choosing%20the%20Best%20Notificat%20cc05724f1574487880bee9a8d0edd966/MicrosoftTeams.png)
+    ![Microsoft Teams Notifications](https://github.com/novuhq/blog/blob/main/2024/Nov/MCID-188/media-assets/MicrosoftTeams.png?raw=true)
     
 - **Telegram**: Known for its high level of privacy and user control, Telegram notifications can be sent directly to individuals or groups, and it supports notifications from custom bots. These bots can send automated updates, alerts, or other messages, allowing organizations to engage large audiences efficiently and provide real-time information.
 
