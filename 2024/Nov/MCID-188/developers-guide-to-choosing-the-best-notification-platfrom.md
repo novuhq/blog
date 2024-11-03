@@ -263,7 +263,7 @@ Chat notifications allow for real-time user engagement on familiar platforms.
 
 **Telegram** provides secure, customizable notifications to individual users or groups, making it ideal for platforms with a privacy-focused user base or those that value security.
 
-**Discord API**
+[**Discord API**](https://docs.novu.co/integrations/providers/chat/discord)
 
 **Discord API** supports direct and channel-based notifications, making it perfect for community-driven platforms and teams needing effective real-time updates for collaborative environments.
 
