@@ -136,26 +136,49 @@ These are all great features and characteristics; however, how do notification p
 
 Here are ways notification platforms play a vital role for businesses and developers seeking to enhance user engagement and [communication experience](https://novu.co/usecases/improve-communication-experience/?utm_campaign=ws-notification-service):
 
-- **Improved user engagement:** Notifications, among other functions, remind customers to interact and engage with a product. Through [multi-channel delivery](https://novu.co/usecases/multi-channel-notifications/), users can receive notifications in a convenient format. This, combined with high relevance and customization, helps the business target, engage, and communicate with each user on a more personal level, leading to higher engagement.
+**Improved user engagement**
+
+Notifications, among other functions, remind customers to interact and engage with a product. Through [multi-channel delivery](https://novu.co/usecases/multi-channel-notifications/), users can receive notifications in a convenient format. This, combined with high relevance and customization, helps the business target, engage, and communicate with each user on a more personal level, leading to higher engagement.
     
+**Enhanced customer experience** 
+
+Users turn off notifications or, in extreme cases, [delete applications](https://www.reddit.com/r/Android/comments/zc9mv/dear_app_developers_if_your_app_spams_up_my/) for various reasons, primarily when notifications are sent at inconvenient times or too frequently, leading to notification fatigue and frustration.
+
+However, notification platforms provide valuable analytics on user engagement, such as the optimal time of day to send notifications and the most effective formats for different user segments. Marketing, Product, and Developers can leverage these insights to deliver value and drive engagement by ensuring timely, relevant, and well-paced notifications.
     
-- **Enhanced customer experience:** Users turn off notifications or, in extreme cases, [delete applications](https://www.reddit.com/r/Android/comments/zc9mv/dear_app_developers_if_your_app_spams_up_my/) for various reasons, primarily when notifications are sent at inconvenient times or too frequently, leading to notification fatigue and frustration.
-    
-    
-    However, notification platforms provide valuable analytics on user engagement, such as the optimal time of day to send notifications and the most effective formats for different user segments. Marketing, Product, and Developers can leverage these insights to deliver value and drive engagement by ensuring timely, relevant, and well-paced notifications.
-    
-- **Increased operational efficiency:** Notification [workflows](https://docs.novu.co/concepts/workflows) streamline repetitive communication tasks by automating them end-to-end, significantly reducing the need for manual intervention. Through seamless integration with business systems like customer relationship management (CRM) or marketing automation tools, [workflows](https://docs.novu.co/concepts/workflows) ensure that critical notifications are triggered automatically at precisely the right time.
-    
-    
-    For instance, when a new customer is added to the CRM, a [notification workflow](https://docs.novu.co/concepts/workflows) can automatically initiate a sequence of messages, such as a welcome email followed by onboarding tips, without requiring additional input from the sales or marketing team. This automated workflow not only reduces the workload on customer service teams but also ensures consistency, minimizes human error, and creates a smooth, responsive user experience.
-    
-- **Subscriber (recipient) management:** Notification platforms simplify managing large numbers of subscribers by organizing them into specific segments, enabling precise targeting and personalization. Businesses can easily manage [subscriber](https://docs.novu.co/concepts/subscribers) lists, track engagement, and customize notifications to ensure messages are relevant to each user segment, enhancing user satisfaction and engagement.
-- **Multi-tenancy support:** [Multi-tenancy](https://docs.novu.co/concepts/tenants) allows businesses to separate and manage notifications across various clients or brands within a single system, ensuring data privacy and control. This feature enables each tenant to maintain [unique subscriber preferences](https://docs.novu.co/concepts/preferences) and communication styles, making it easier to provide tailored messaging and achieve the specific goals of each organization while operating under one unified platform.
-- **Better conversion rates:** Many notification platforms offer A/B testing features, allowing businesses to experiment with different messaging strategies, formats, and timings. For example, companies can A/B test different subject lines for an email campaign to reveal which version leads to higher open and click-through rates, directly contributing to better retention rates and conversion outcomes.
-- **No-Code tools to manage notifications:** With a [no-code user interface](https://docs.novu.co/getting-started/non-technical) (no-code editors), teams can adjust notification messaging, verbiage, and cadence without needing engineering support. This empowers marketing, product, and support teams to fine-tune notifications in real-time, ensuring messages are aligned with current campaigns, user feedback, and evolving engagement strategies, all without disrupting development workflows.
-- **Improved timing with scheduling and delay functionality:** Notification platforms enable businesses to [schedule messages](https://docs.novu.co/workflow/delay) or introduce a [delay](https://docs.novu.co/workflow/delay), ensuring they reach users at the most effective times. For example, a platform can queue up messages to reach a global audience during their respective peak engagement times or delay notifications based on users' time zones and habits. This minimizes disruption and allows users to receive updates when they’re most likely to engage, reducing notification fatigue and increasing relevance.
-- **Better user experience with digest functionality:** [Digest](https://docs.novu.co/workflow/digest) notifications consolidate multiple updates into a single message, preventing users from feeling overwhelmed by individual alerts. By grouping updates, [notification digests enhance user experience](https://novu.co/usecases/improve-communication-experience/) and maintain a clean inbox while still keeping users informed. This functionality also benefits companies by keeping users more engaged over time, as they are less likely to opt out of receiving notifications.
-- **Personalized communication through user preferences:** Offering users the ability to set their notification [preferences](https://docs.novu.co/concepts/preferences#preferences)—such as which channels to receive updates on, preferred frequency, and specific types of notifications—gives them control over their experience. Platforms that integrate [user preferences](https://docs.novu.co/concepts/preferences#preferences) into their notifications create a more tailored experience, resulting in increased user satisfaction and trust, reduced churn, and a healthier relationship with customers by reducing unwanted alerts.
+**Increased operational efficiency**
+
+Notification [workflows](https://docs.novu.co/concepts/workflows) streamline repetitive communication tasks by automating them end-to-end, significantly reducing the need for manual intervention. Through seamless integration with business systems like customer relationship management (CRM) or marketing automation tools, [workflows](https://docs.novu.co/concepts/workflows) ensure that critical notifications are triggered automatically at precisely the right time.
+
+For instance, when a new customer is added to the CRM, a [notification workflow](https://docs.novu.co/concepts/workflows) can automatically initiate a sequence of messages, such as a welcome email followed by onboarding tips, without requiring additional input from the sales or marketing team. This automated workflow not only reduces the workload on customer service teams but also ensures consistency, minimizes human error, and creates a smooth, responsive user experience.
+
+**Subscriber (recipient) management** 
+
+Notification platforms simplify managing large numbers of subscribers by organizing them into specific segments, enabling precise targeting and personalization. Businesses can easily manage [subscriber](https://docs.novu.co/concepts/subscribers) lists, track engagement, and customize notifications to ensure messages are relevant to each user segment, enhancing user satisfaction and engagement.
+
+**Multi-tenancy support**
+
+[Multi-tenancy](https://docs.novu.co/concepts/tenants) allows businesses to separate and manage notifications across various clients or brands within a single system, ensuring data privacy and control. This feature enables each tenant to maintain [unique subscriber preferences](https://docs.novu.co/concepts/preferences) and communication styles, making it easier to provide tailored messaging and achieve the specific goals of each organization while operating under one unified platform.
+
+**Better conversion rates**
+
+Many notification platforms offer A/B testing features, allowing businesses to experiment with different messaging strategies, formats, and timings. For example, companies can A/B test different subject lines for an email campaign to reveal which version leads to higher open and click-through rates, directly contributing to better retention rates and conversion outcomes.
+
+**No-Code tools to manage notifications**
+
+With a [no-code user interface](https://docs.novu.co/getting-started/non-technical) (no-code editors), teams can adjust notification messaging, verbiage, and cadence without needing engineering support. This empowers marketing, product, and support teams to fine-tune notifications in real-time, ensuring messages are aligned with current campaigns, user feedback, and evolving engagement strategies, all without disrupting development workflows.
+
+**Improved timing with scheduling and delay functionality**
+
+Notification platforms enable businesses to [schedule messages](https://docs.novu.co/workflow/delay) or introduce a [delay](https://docs.novu.co/workflow/delay), ensuring they reach users at the most effective times. For example, a platform can queue up messages to reach a global audience during their respective peak engagement times or delay notifications based on users' time zones and habits. This minimizes disruption and allows users to receive updates when they’re most likely to engage, reducing notification fatigue and increasing relevance.
+
+**Better user experience with digest functionality**
+
+[Digest](https://docs.novu.co/workflow/digest) notifications consolidate multiple updates into a single message, preventing users from feeling overwhelmed by individual alerts. By grouping updates, [notification digests enhance user experience](https://novu.co/usecases/improve-communication-experience/) and maintain a clean inbox while still keeping users informed. This functionality also benefits companies by keeping users more engaged over time, as they are less likely to opt out of receiving notifications.
+
+**Personalized communication through user preferences**
+
+Offering users the ability to set their notification [preferences](https://docs.novu.co/concepts/preferences#preferences)—such as which channels to receive updates on, preferred frequency, and specific types of notifications—gives them control over their experience. Platforms that integrate [user preferences](https://docs.novu.co/concepts/preferences#preferences) into their notifications create a more tailored experience, resulting in increased user satisfaction and trust, reduced churn, and a healthier relationship with customers by reducing unwanted alerts.
 
 So far, we know why notification platforms are important and what to expect from the right service. Based on our needs, let’s consider some of the available notification services and providers that could be integrated into the notification platform.
 
