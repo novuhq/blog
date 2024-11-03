@@ -201,23 +201,23 @@ SMS notifications are key for urgent, direct communication with users.
 
 [**Twilio**](https://docs.novu.co/integrations/providers/sms/twilio)
 
-A leading choice for SMS notifications, [Twilio](https://www.twilio.com/) provides extensive global coverage, developer-friendly APIs, and flexible pricing for businesses of all sizes. Its reliability and ease of use make it a favorite for teams needing scalable SMS integration in their applications.
+A leading choice for SMS notifications, **Twilio** provides extensive global coverage, developer-friendly APIs, and flexible pricing for businesses of all sizes. Its reliability and ease of use make it a favorite for teams needing scalable SMS integration in their applications.
 
 [**Nexmo (Vonage)**](https://docs.novu.co/integrations/providers/sms/nexmo)
 
-[Nexmo](https://www.vonage.com/) supports SMS, voice, and verification services, focusing on simplicity and high deliverability. Its developer-friendly platform is ideal for teams looking to implement reliable communication channels quickly and effectively.
+**Nexmo** supports SMS, voice, and verification services, focusing on simplicity and high deliverability. Its developer-friendly platform is ideal for teams looking to implement reliable communication channels quickly and effectively.
 
 [**Plivo**](https://docs.novu.co/integrations/providers/sms/plivo)
 
-[Plivo](https://www.plivo.com/) offers cost-efficient SMS and voice solutions with a global reach. Designed for high-volume messaging, it provides transparent pricing and is a practical choice for applications needing affordable yet powerful SMS capabilities.
+**Plivo** offers cost-efficient SMS and voice solutions with a global reach. Designed for high-volume messaging, it provides transparent pricing and is a practical choice for applications needing affordable yet powerful SMS capabilities.
 
 [**Sinch**](https://docs.novu.co/integrations/providers/sms/sinch)
 
-[Sinch](https://www.sinch.com/) specializes in SMS and voice with rich media support, which is ideal for businesses seeking to send multimedia messages or engage users more interactively, especially for marketing or customer support use cases.
+**Sinch** specializes in SMS and voice with rich media support, which is ideal for businesses seeking to send multimedia messages or engage users more interactively, especially for marketing or customer support use cases.
 
 [**MessageBird**](https://docs.novu.co/integrations/providers/sms/messagebird)
 
-[MessageBird](https://www.messagebird.com/) supports SMS, voice, and chat APIs, making it suitable for multi-channel applications. With a strong API focus, MessageBird is ideal for global teams wanting seamless integration and wide-reaching SMS capabilities.
+**MessageBird** supports SMS, voice, and chat APIs, making it suitable for multi-channel applications. With a strong API focus, MessageBird is ideal for global teams wanting seamless integration and wide-reaching SMS capabilities.
 
 ### Email notification providers
 
@@ -225,23 +225,23 @@ Email notifications are crucial for transactional, marketing, and engagement com
 
 [**SendGrid**](https://docs.novu.co/integrations/providers/email/sendgrid)
 
-[SendGrid](https://sendgrid.com/) is known for its high deliverability and robust APIs, supporting both transactional and marketing emails. With advanced analytics, it’s favored by teams seeking to optimize user engagement and gain insights into email performance.
+**SendGrid** is known for its high deliverability and robust APIs, supporting both transactional and marketing emails. With advanced analytics, it’s favored by teams seeking to optimize user engagement and gain insights into email performance.
 
 [**Amazon SES (Simple Email Service)**](https://docs.novu.co/integrations/providers/email/ses)
 
-[Amazon SES](https://aws.amazon.com/ses/) is a cost-effective email solution within the AWS ecosystem. With easy scalability and high deliverability, it’s ideal for applications needing large-scale, budget-friendly email capabilities in the cloud.
+**Amazon SES** is a cost-effective email solution within the AWS ecosystem. With easy scalability and high deliverability, it’s ideal for applications needing large-scale, budget-friendly email capabilities in the cloud.
 
 [**Mailgun**](https://docs.novu.co/integrations/providers/email/mailgun)
 
-[Mailgun](https://www.mailgun.com/) offers a developer-focused API with advanced analytics, making it a strong choice for teams needing customized email flows and insights. Its flexibility supports complex email strategies tailored to user behavior.
+**Mailgun** offers a developer-focused API with advanced analytics, making it a strong choice for teams needing customized email flows and insights. Its flexibility supports complex email strategies tailored to user behavior.
 
 [**Postmark**](https://docs.novu.co/integrations/providers/email/postmark)
 
-[Postmark](https://postmarkapp.com/) specializes in transactional email, prioritizing speed and reliability. It’s particularly suited for critical communications like password resets and verification emails, ensuring fast delivery and optimized uptime.
+**Postmark** specializes in transactional email, prioritizing speed and reliability. It’s particularly suited for critical communications like password resets and verification emails, ensuring fast delivery and optimized uptime.
 
 [**SparkPost**](https://docs.novu.co/integrations/providers/email/sparkpost)
 
-[SparkPost](https://www.sparkpost.com/) combines reliable deliverability with data-driven insights, providing a solid choice for teams focused on maximizing email engagement through real-time analytics.
+**SparkPost** combines reliable deliverability with data-driven insights, providing a solid choice for teams focused on maximizing email engagement through real-time analytics.
 
 ### Chat notification providers
 
@@ -249,23 +249,23 @@ Chat notifications allow for real-time user engagement on familiar platforms.
 
 [**Slack API**](https://docs.novu.co/integrations/providers/chat/slack)
 
-[Slack API](https://api.slack.com/) is perfect for internal team alerts and notifications, allowing developers to integrate system messages directly into Slack channels or DMs, enhancing team awareness and response times.
+**Slack API** is perfect for internal team alerts and notifications, allowing developers to integrate system messages directly into Slack channels or DMs, enhancing team awareness and response times.
 
 [**Twilio WhatsApp API**](https://docs.novu.co/integrations/providers/chat/whats-app)
 
-[WhatsApp via Twilio](https://www.twilio.com/whatsapp) enables secure, engaging communication for updates like order status and appointment reminders. This is ideal for teams needing a reliable, globally popular channel for direct customer engagement.
+**WhatsApp via Twilio** enables secure, engaging communication for updates like order status and appointment reminders. This is ideal for teams needing a reliable, globally popular channel for direct customer engagement.
 
 [**Messenger Platform**](https://docs.novu.co/integrations/providers/chat/messenger)
 
-[Facebook Messenger](https://developers.facebook.com/docs/messenger-platform) offers a popular real-time communication channel within the Facebook ecosystem. It’s especially useful for customer support and instant notifications.
+**Facebook Messenger** offers a popular real-time communication channel within the Facebook ecosystem. It’s especially useful for customer support and instant notifications.
 
 [**Telegram Bot API**](https://docs.novu.co/integrations/providers/chat/telegram)
 
-[Telegram](https://core.telegram.org/bots/api) provides secure, customizable notifications to individual users or groups, making it ideal for platforms with a privacy-focused user base or those that value security.
+**Telegram** provides secure, customizable notifications to individual users or groups, making it ideal for platforms with a privacy-focused user base or those that value security.
 
-[**Discord API**](https://docs.novu.co/integrations/providers/chat/discord)
+**Discord API**
 
-[Discord API](https://discord.com/developers/docs/intro) supports direct and channel-based notifications, making it perfect for community-driven platforms and teams needing effective real-time updates for collaborative environments.
+**Discord API** supports direct and channel-based notifications, making it perfect for community-driven platforms and teams needing effective real-time updates for collaborative environments.
 
 ### In-App Notification Providers
 
@@ -273,11 +273,11 @@ In-app notifications allow teams to engage users directly within the application
 
 [**Novu**](https://novu.co/)
 
-[Novu](https://novu.co/) is an open-source, in-app notification solution offering ready-to-use components that simplify implementation and boost user engagement. With customizable notification feeds, preference centers, and real-time delivery, Novu allows teams to quickly deploy tailored in-app notifications that enhance user experience without the overhead of custom development. Designed for flexibility, Novu’s SDKs and workflows ensure seamless integration, giving teams complete control over notification appearance and behavior.
+**Novu** is an open-source, in-app notification solution offering ready-to-use components that simplify implementation and boost user engagement. With customizable notification feeds, preference centers, and real-time delivery, Novu allows teams to quickly deploy tailored in-app notifications that enhance user experience without the overhead of custom development. Designed for flexibility, Novu’s SDKs and workflows ensure seamless integration, giving teams complete control over notification appearance and behavior.
 
 **Airship**
 
-In addition to push notifications, [Airship](https://www.airship.com/) offers in-app messaging designed to enhance user engagement within mobile apps. Airship’s in-app notifications are customizable, providing detailed analytics and targeting capabilities. This makes it a strong choice for product teams focused on personalized messaging that aligns with users’ in-app behavior.
+In addition to push notifications, **Airship** offers in-app messaging designed to enhance user engagement within mobile apps. Airship’s in-app notifications are customizable, providing detailed analytics and targeting capabilities. This makes it a strong choice for product teams focused on personalized messaging that aligns with users’ in-app behavior.
 
 **Firebase In-App Messaging**
 
@@ -285,11 +285,11 @@ Firebase In-App Messaging allows product teams to send targeted messages to acti
 
 **Supabase**
 
-[Supabase](https://supabase.com/) provides real-time database capabilities, making it well-suited for event-driven in-app notifications. Through database triggers and real-time APIs, Supabase allows developers to send notifications based on specific user actions or data changes, creating an interactive, responsive user experience.
+**Supabase** provides real-time database capabilities, making it well-suited for event-driven in-app notifications. Through database triggers and real-time APIs, Supabase allows developers to send notifications based on specific user actions or data changes, creating an interactive, responsive user experience.
 
 **OneSignal**
 
-While primarily known for push and SMS, [OneSignal](https://onesignal.com/) also supports in-app messaging, making it a flexible option for multi-channel engagement. Its in-app messaging features are customizable and can be integrated alongside other notification types, ideal for teams seeking a single platform for all messaging needs.
+While primarily known for push and SMS, **OneSignal** also supports in-app messaging, making it a flexible option for multi-channel engagement. Its in-app messaging features are customizable and can be integrated alongside other notification types, ideal for teams seeking a single platform for all messaging needs.
 
 In summary, while these other notification platforms offer unique functionalities, Novu encompasses their capabilities and provides a comprehensive solution for developers looking to implement robust notification systems.
 
