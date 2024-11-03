@@ -1,7 +1,5 @@
 # A Developer’s Guide to Choosing the Best Notification Platform
 
-Meta: *Learn* *how to select the best notification platform for your app; different types of notifications, key features, and top platforms like FCM and Novu.*
-
 Duolingo is well known for its unique usage of rich notifications, which, according to co-founder [Luis von Ahn](https://www.ted.com/talks/luis_von_ahn_how_to_make_learning_as_addictive_as_social_media?subtitle=en), are “one of the core drivers of Duolingo’s impressive daily user traffic.” This highlights how essential notifications are in keeping customers updated and connected to apps and products. However, designing an efficient notification system is not without its challenges.
 
 [“How to build a notification system?”](https://dev.to/novu/creating-a-notification-system-with-novu-and-sendgrid-1311/?utm_campaign=ws-notification-service) is a common question on platforms like [StackOverflow](https://stackoverflow.com/questions/9735578/building-a-notification-system), [Quora,](https://www.quora.com/How-easy-is-it-to-build-push-notification-into-your-mobile-apps-Versus-hiring-an-outside-company-to-do-it-for-you) and [Reddit](https://www.reddit.com/r/reactjs/comments/1bwrtzg/how_do_you_build_your_notifications_system/). The complexity of this process has led developers to seek notification platforms that simplify how notifications are integrated into apps so they don’t have to build from scratch. As such, this guide will provide developers with the necessary knowledge and considerations when choosing a notification platform. Let’s get started.
@@ -18,15 +16,11 @@ Notifications are messages or alerts designed to inform or remind users about sp
 
 ![https://paper-attachments.dropboxusercontent.com/s_3A751D176E5DDEDFE7E3CEE16550EBA8C689B2FA68656B180A10AE82ED7A93DE_1725357901549_Screenshot_20240903-110352.png](https://paper-attachments.dropboxusercontent.com/s_3A751D176E5DDEDFE7E3CEE16550EBA8C689B2FA68656B180A10AE82ED7A93DE_1725357901549_Screenshot_20240903-110352.png)
 
-Push notification of sales from Amazon.
-
 ### In-app notifications
 
 In-app notifications appear within the application while users are actively using it. They’re designed to improve the user experience or guide the user to a specific app action without interrupting their flow.
 
 ![In-app notification](https://paper-attachments.dropboxusercontent.com/s_3A751D176E5DDEDFE7E3CEE16550EBA8C689B2FA68656B180A10AE82ED7A93DE_1725986843967_T2ANydmY83.png)
-
-In-app notification
 
 With a [75% open rate](https://truelist.co/blog/push-notification-statistics/), in-app notifications perform better than push notifications. Some common forms of in-app notifications include onboarding tips in the form of modals, tooltips, banners, etc.
 
@@ -43,10 +37,6 @@ Email notifications are especially beneficial for reaching users who may not act
 SMS notifications or SMS messages are text messages sent to a user’s mobile phone. They are mobile messaging typically used for urgent or time-sensitive alerts and provide a direct and reliable way to send messages that reach users regardless of their device or internet connection. Due to SMS’s non-reliance on internet connectivity, they are best suited for almost every user base. Use cases for this include sending verification codes, service alerts, etc.
 
 ![SMS notification](https://paper-attachments.dropboxusercontent.com/s_3A751D176E5DDEDFE7E3CEE16550EBA8C689B2FA68656B180A10AE82ED7A93DE_1725358219159_Screenshot+2024-09-03+at+11.10.13.png)
-
-SMS notification
-
-Next, we’ll explore notification platforms and how they work with the different types of notifications.
 
 ### Chat notifications
 
@@ -75,6 +65,8 @@ Examples:
 - **Telegram**: Known for its high level of privacy and user control, Telegram notifications can be sent directly to individuals or groups, and it supports notifications from custom bots. These bots can send automated updates, alerts, or other messages, allowing organizations to engage large audiences efficiently and provide real-time information.
 
 Each platform supports unique integrations, allowing notifications to be customized to the audience’s specific needs and preferences.
+
+Next, we’ll explore notification platforms and how they work with the different types of notifications.
 
 ---
 
