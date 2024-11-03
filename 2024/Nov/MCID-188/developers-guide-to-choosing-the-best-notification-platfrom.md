@@ -130,7 +130,7 @@ This scalability ensures that businesses maintain effective communication as the
 
 As explored earlier, notifications can be of various types, and versatility is one of the core features every notification platform introduces into the build. This versatility is in [multi-channel delivery](https://novu.co/usecases/multi-channel-notifications/?utm_campaign=ws-notification-service), where multiple communication channels like push notifications, email, and SMS are supported. This ensures businesses can choose the different modes of message delivery as needed.
 
-![Frame 1321320709@2x.png](A%20Developer%E2%80%99s%20Guide%20to%20Choosing%20the%20Best%20Notificat%20cc05724f1574487880bee9a8d0edd966/Frame_13213207092x.png)
+![Multi-channels](https://github.com/novuhq/blog/blob/main/2024/Nov/MCID-188/media-assets/Cross-channels.png?raw=true)
 
 ### Integration and compatibility
 
