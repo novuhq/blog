@@ -25,7 +25,7 @@ WebSockets instant two-way communication, high scalability and low latency makes
 
 ![server-sent events](https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1727087361765_server-sent-event.png)
 
-SSE is simpler to implement than WebSockets and well-suited for applications that involves one-way communication, such as receiving live updates or notifications. **Twitter** is a notable example of a company using SSE to deliver real-time updates to its users.
+SSE is simpler to implement than WebSockets and well-suited for applications that involve one-way communication, such as receiving live updates or notifications. **Twitter** is a notable example of a company using SSE to deliver real-time updates to its users.
 
 ### Firebase Realtime Database
 
@@ -33,11 +33,11 @@ Firebase is ideal for applications that require real-time data synchronization b
 
 Key features of Firebase Realtime Database also include scalability and cross-platform compatibility. Companies like [Stage](https://firebase.google.com/case-studies/stage-app) and [Galarm](https://firebase.google.com/case-studies/acintyo-galarm-app) use Firebase to send personalized and automated notifications to their users.
 
-Now that we've explored the different real-time technologies and their features. Let’s implement these technologies in a ReactJS application in the next section.
+Now that we've explored the different real-time technologies and their features, in the next section, we’ll implement these technologies in a ReactJS application.
 
 ## Setting up a React project
 
-Having discussed the real-time notifications in detail, let’s learn how to use them in a React.js application. The source code for this project is on [GitHub](https://github.com/Kizmelvin/react-notifications). Let’s start by setting up the project environment. 
+Having discussed the real-time notifications in detail, let’s learn how to use them in a React.js application. The source code for this project is on [GitHub](https://github.com/novuhq/blog/tree/main/2024/Nov/MCID-186/source-code). Let’s start by setting up the project environment. 
 
 Create the project folder and add a new [React.js](https://react.dev/) project inside it via the terminal with the command below:
 
@@ -163,7 +163,7 @@ Within the `src` directory of the project, create a **components** folder and a 
     export default Register;
 ```
 
-The snippet above manages the user input and validates it. Upon entering their details and clicking the “**Create account**” button, users send their information to the WebSocket server using the `socket.send()` method. 
+The snippet above manages and validates user input. Upon entering their details and clicking the “**Create account**” button, users send their information to the WebSocket server using the `socket.send()` method. 
 
 The server then processes the received data and responds by sending a confirmation back to the client. The `handleRegister()` function also redirects the user to the "**home**" route using the `useNavigate()` function.
 
@@ -196,7 +196,7 @@ Next, let’s create the “**home**” route. In the `c`  `omponent`  `s` folde
 
 **The snippet above does the following:**
 
-* It listens to the server `onmessage` event and trigger a notification to inform the user of the successful registration.
+* It listens to the server `onmessage` event and triggers a notification to inform the user of the successful registration.
 * Renders the toast container and a `h1` welcoming the user.
 
 Next, inside the `src` folder, let’s clean up the `App.js` file and update it with the following snippet:
@@ -247,11 +247,13 @@ In the browser, we can now register for an account and receive real-time WebSock
 
 ![user registration](https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1726998326880_72FA7C6B-C4A3-4E5E-8BAB-93D62BBE3FAF.GIF)
 
-Now that we've learned how to use WebSockets, let's add a notification using Firebase Cloud Messaging.
+Now that we've learned how to use WebSockets let's add a notification using Firebase Cloud Messaging.
 
 ## Implementing real-time notifications using Firebase
 
-Here we will implement real-time notification in our React app using Firebase. To start, launch [Firebase](https://firebase.google.com/) and create a new project.
+Here, we will implement real-time notifications in our React app using Firebase. 
+
+To start, launch [Firebase](https://firebase.google.com/) and create a new project.
 
 Add a web application to the project and register the app.
 
@@ -298,7 +300,7 @@ The snippet above sets up a connection between the React application and Firebas
 
 * It first imports the necessary modules for Firebase app initialization and message handling.
 * Then, it defines the Firebase project configuration with the unique API key, project ID, and other details. 
-* Lastly, the code initializes the Firebase app and gets an instance of the messaging service, which will be used to communicate with FCM for sending and receiving notifications.
+* Lastly, the code initializes the Firebase app and gets an instance of the messaging service, which will be used to communicate with FCM to send and receive notifications.
 
 Remember to replace the placeholder values with real Firebase project credentials.
 
@@ -331,7 +333,7 @@ If granted, it obtains the FCM token using the `getToken` function from the Fire
 
 Firebase Cloud Messaging relies on [service workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) to receive and handle notifications. 
 
-Service workers are background scripts that run even when the browser window is closed, or the app is not in the foreground. 
+Service workers are background scripts that run even when the browser window is closed or the app is not in the foreground. 
 
 In the public folder of our React project, create a `firebase-messaging-sw.js` file with the following snippet:
 
@@ -371,7 +373,8 @@ In the public folder of our React project, create a `firebase-messaging-sw.js` f
 * Retrieves an instance of Firebase Messaging to handle notifications received when the app is in the background.
 * The `onBackgroundMessage` listener monitors incoming messages and displays them as notifications using the `showNotification` method.
 
-Next, import the `generateToken` function from the `firebaseConfig.js` file within the `Homepage.js` component. Then, call the function within the `useEffect` hook to ensure it's executed once the component mounts.
+Next, import the `generateToken` function from the `firebaseConfig.js` file within the `Homepage.js` component. 
+Then, call the function within the `useEffect` hook to ensure it's executed once the component mounts.
 
 Add the following code in the import section in the `Homepage.js` file:
 
@@ -422,7 +425,8 @@ The token is a device’s identifier, enabling Firebase to deliver targeted push
 
 ![notification-message](https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1727083851676_Screenshot+2024-09-23+at+10.30.34.png)
 
-Click the “**Send test message button**”, and on the flyout box, locate the field labeled "**Add an FCM registration token**." Paste the registration token we copied earlier into this field. 
+Click the “**Send test message button**” and on the flyout box, locate the field labeled "**Add an FCM registration token**." 
+Paste the registration token we copied earlier into this field. 
 
 ![adding-a-device-token](https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1725115061583_Screenshot+2024-08-31+at+15.37.10.png)
 
@@ -470,11 +474,11 @@ To demonstrate how Server-Sent Events (SSE) work, let's create a new file named 
     app.listen(PORT, () => console.log( `server running on port ${PORT}` ));
 ```
 
-The code snippet above utilizes Express to create an SSE endpoint at `/events` . The cors middleware is configured to allow cross-origin requests from the specified origin `http://localhost:3000` .
+The code snippet above utilizes Express to create an SSE endpoint at `/events` . The CORS middleware is configured to allow cross-origin requests from the specified origin `http://localhost:3000` .
 
 The `app.get(’/events’, ...)` route handler sets the appropriate headers for SSE communication and establishes a persistent connection with the client.
 
-A `setInterval()` function is used to send data to the connected clients periodically. In this example, a message with a timestamp is sent every 5 seconds. The data is formatted as JSON and sent using `res.write()`.
+A `setInterval()` function periodically sends data to the connected clients. In this example, a message with a timestamp is sent every 5 seconds. The data is formatted as JSON and sent using `res.write()`.
 
 ## Integrating SSE in a React project
 
@@ -540,7 +544,7 @@ Here we’ll handle the incoming data streams from the SSE server. Create a `Ser
     export default ServerEvents;
 ```
 
-The snippet above does the following:
+**The snippet above does the following:**
 
 * Establishes a connection with an SSE endpoint.
 * Listens for incoming messages and updates the component’s state with the received data. 
@@ -553,7 +557,7 @@ The app will look like the one below, with the updated time changing after a whi
 
 ![server-sent notification](https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1727056971021_Screenshot+2024-09-23+at+03.02.28.png)
 
-We've learned how to send real-time notifications using WebSockets, Firebase Cloud Messaging and SSE. 
+We've learned how to send real-time notifications using WebSockets, Firebase Cloud Messaging, and SSE. 
 
 Next, let’s add Novu real-time notification to the mix.
 
@@ -563,13 +567,13 @@ In this section, we’ll add a verification process to our application using Nov
 
 [Novu](https://novu.co/?utm_campaign=real-time-notification) is an open-source JavaScript-native notification framework built for developers. 
 
-It simplifies notification management by letting us send messages through different channels like emails, texts, app notifications, and chat. 
+It simplifies notification management by letting us send messages through different channels, such as emails, texts, app notifications, and chat. 
 
 We can easily customize these messages and set up rules for when they should be sent, ensuring that users get the right notifications at the right time.
 
 To start using Novu, [create an account](https://dashboard.novu.co/?utm_campaign=real-time-notification) and navigate to **Workflows** > **demo-verify-otp** > **send****-****email** to see the sample email workflow. 
 
-For this demo, we'll use the default Slack template. But you can [create your own workflows](https://docs.novu.co/workflow/introduction?utm_campaign=real-time-notification) to match different brands and styles.
+For this demo, we'll use the default Slack template. But you can [create your workflows](https://docs.novu.co/workflow/introduction?utm_campaign=real-time-notification) to match different brands and styles.
 
 ![novu email template](https://paper-attachments.dropboxusercontent.com/s_4C5BEC3BD3E499C6B665918B6DB2EBBF4B2A3DBEDC40BD331086AF17704B9031_1727062437182_Screenshot+2024-09-23+at+04.33.31.png)
 
@@ -706,31 +710,31 @@ Add the following snippet to the `Homepage.js` file:
 * The `emailVerified` function checks if the user's entered code (`userCode`) matches the email verification code (`emailCode`). If so, it displays a success toast, hides the verification section, and shows the main content (`ServerEvents` component).
 * Then, it conditionally renders elements based on the verification state in the return function.
 
-The full code for the `Homepage.js` component is in this [GitHub](https://gist.github.com/Kizmelvin/834fa868cdca5a844df59b628fd0de42) [Gist](https://gist.github.com/Kizmelvin/834fa868cdca5a844df59b628fd0de42). 
+The complete code for the `Homepage.js` component is in this [GitHub file](https://github.com/novuhq/blog/blob/main/2024/Nov/MCID-186/source-code/src/components/Homepage.js). 
 
 Now, the application will look like this:
 
 ![verify email](https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1727077298315_Screenshot+2024-09-23+at+08.41.11.png)
 
-Having discussed different options for real-time notifications and how to implement them in a React application, let's now discuss their comparison.
+Having discussed different options for real-time notifications and how to implement them in a React application, let's now compare them.
 
 ## Comparing the real-time technologies
 
 ![comparison table](https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1727087862211_comparing-real-time-technologies.png)
 
-As seen from the table, WebSockets offer low latency and full-duplex communication, but they require more complex management. 
+As the table shows, WebSockets offer low latency and full-duplex communication, but they require more complex management. 
 
 SSE is simpler but lacks bidirectional communication. 
 
 Firebase Realtime Database excels in real-time data synchronization but might need custom data management. 
 
-Novu is outstanding with its user-friendly interface, pre-built components like notification badges, and seamless integration with popular platforms like Node.js, Ruby on Rails, and Python, making it a better choice for various real-time applications, from messaging and communication to financial services. 
+Novu is outstanding with its user-friendly interface, pre-built components like notification badges, and seamless integration with popular platforms like Node.js, Ruby on Rails, and Python. These features make it a better choice for various real-time applications, from messaging and communication to financial services. 
 
-Next, let’s talk about how to make the real-time notifications work even better and faster.
+Next, let’s talk about how to make real-time notifications work even better and faster.
 
 ## Optimizing performance and scalability
 
-To prevent our application from slowing down or crashing due to complex notification logic, we’ll shift our focus to optimizing performance and scalability. 
+To prevent our application from slowing down or crashing due to complex notification logic, we’ll focus on optimizing performance and scalability. 
 
 By managing state, throttling, or debouncing notifications, we can enhance the overall performance of our application. 
 
@@ -738,7 +742,7 @@ Let’s discuss these factors in detail.
 
 ### Managing state efficiently
 
-- **Memoization:** Adopt useMemo and useCallback hooks to prevent unnecessary re-renders, especially for expensive calculations or functions within components.
+- **Memoization:** Adopt `useMemo` and `useCallback` hooks to prevent unnecessary re-renders, especially for expensive calculations or functions within components.
 - **Selective updates:** Update only the necessary parts of the state to avoid unnecessary re-renders.
 - **Data normalization:** Normalize data structures to reduce complexity and improve performance.
 
@@ -746,7 +750,7 @@ Let’s discuss these factors in detail.
 
 Consider implementing [throttling or debouncing techniques](https://medium.com/@mujaffarhssn/debouncing-vs-throttling-optimizing-your-javascript-for-performance-a99d38f5eb3b) to prevent notification overload and enhance user experience. 
 
-Throttling limits the rate at which notifications are sent while debouncing delays them until user input is complete. 
+Throttling limits the rate at which notifications are sent, while debouncing delays them until user input is complete. 
 
 Libraries like [Lodash](https://lodash.com/) can streamline the implementation of these techniques.
 
@@ -760,7 +764,7 @@ Server-side filtering can further reduce the number of notifications sent to cli
 
 ## Enhancing user experience
 
-We can enhance user engagement and satisfaction by focusing on clear, concise messaging, actionable notifications, and sound or vibration alerts.
+Focusing on clear, concise messaging, actionable notifications, and sound or vibration alerts can enhance user engagement and satisfaction.
 
 ### Designing an intuitive notification UI
 
@@ -809,7 +813,7 @@ Employ robust authentication and authorization mechanisms to restrict access to 
 
 ### Authentication and authorization
 
-Enhance security by using token-based authentication methods like [JSON Web Token (JWT)](https://en.wikipedia.org/wiki/JSON_Web_Token) to protect server connections. 
+Enhance security by using token-based authentication methods, such as [JSON Web Token (JWT)](https://en.wikipedia.org/wiki/JSON_Web_Token), to protect server connections. 
 
 Also, role-based access control should be implemented to restrict notification access to authorized users, ensuring that only individuals with appropriate permissions can receive and view notifications.
 
@@ -829,7 +833,7 @@ To get started with Novu, [create a free account](https://dashboard.novu.co/auth
 
 ## Additional resources
 
-The following resources offer in-depth information, code examples, and best practices to help us master real-time notifications in React applications.
+The following resources offer in-depth information, code examples, and best practices for mastering real-time notifications in React applications.
 
 * [**Firebase documentation**](https://firebase.google.com/docs)
 * [**WebSocket API**](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
