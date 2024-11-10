@@ -23,21 +23,21 @@ Choosing the right real-time technology is essential for building successful rea
 
 ![https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1725650508428_Websockets+lab.webp](https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1725650508428_Websockets+lab.webp)
 
-WebSockets instant two-way communication, high scalability and low latency makes them ideal for applications like real-time chat, online games, collaborative tools like spreadsheets and location-based services. Companies like **Discord** and **Uber** utilize WebSockets for their core features, demonstrating their effectiveness in delivering real-time experiences.
+WebSockets' instant two-way communication, high scalability, and low latency make them ideal for applications like real-time chat, online games, collaborative tools like spreadsheets, and location-based services. Companies like **Discord** and **Uber** utilize WebSockets for their core features, demonstrating their effectiveness in delivering real-time experiences.
 
 ### Server-Sent Events (SSE)
 
 ![https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1727087361765_server-sent-event.png](https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1727087361765_server-sent-event.png)
 
-SSE is simpler to implement than WebSockets and well-suited for applications that involve one-way communication, such as receiving live updates or notifications. **Twitter** is a notable example of a company using SSE to deliver real-time updates to its users.
+SSE is more straightforward to implement than WebSockets and well-suited for applications that involve one-way communication, such as receiving live updates or notifications. **Twitter** is a notable example of a company using SSE to deliver real-time updates to its users.
 
 ### Firebase Realtime Database
 
-Firebase is ideal for applications that require real-time data synchronization between multiple clients like chat apps, games, or collaborative tools.
+Firebase is ideal for applications that require real-time data synchronization between multiple clients, such as chat apps, games, or collaborative tools.
 
-Key features of Firebase Realtime Database also include scalability and cross-platform compatibility. Companies like [Stage](https://firebase.google.com/case-studies/stage-app) and [Galarm](https://firebase.google.com/case-studies/acintyo-galarm-app) use Firebase to send personalized and automated notifications to their users.
+Critical features of Firebase Realtime Database also include scalability and cross-platform compatibility. Companies like [Stage](https://firebase.google.com/case-studies/stage-app) and [Galarm](https://firebase.google.com/case-studies/acintyo-galarm-app) use Firebase to send personalized and automated notifications to their users.
 
-Now that we've explored the different real-time technologies and their features, in the next section, we’ll implement these technologies in a ReactJS application.
+Now that we've explored the different real-time technologies and their features, we’ll implement these technologies in a ReactJS application in the next section.
 
 ---
 
@@ -107,9 +107,9 @@ The snippet above creates an HTTP server and initializes a WebSocket server on t
 
 While the `socket.on(“message”, ...)` listener is triggered whenever the client sends a message.
 
-The received message is processed, and a response is returned to the client using `socket.send()` .
+The received message is processed, and a response is returned to the client using `socket.send()`.
 
-The server listens on port `8080` , ready to accept WebSocket connections from clients.
+The server listens on port `8080` and is ready to accept WebSocket connections from clients.
 
 ### Connecting the WebSocket server to the React client
 
@@ -257,7 +257,7 @@ In the browser, we can now register for an account and receive real-time WebSock
 
 ![https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1726998326880_72FA7C6B-C4A3-4E5E-8BAB-93D62BBE3FAF.GIF](https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1726998326880_72FA7C6B-C4A3-4E5E-8BAB-93D62BBE3FAF.GIF)
 
-Now that we've learned how to use WebSockets let's add a notification using Firebase Cloud Messaging.
+Now that we've learned how to use WebSockets, let's add a notification using Firebase Cloud Messaging.
 
 ---
 
@@ -308,7 +308,7 @@ Next, create a `firebaseConfig.js` file in the `components` folder and add the c
     export default firebase;
 ```
 
-The snippet above sets up a connection between the React application and Firebase for real-time notifications.
+The snippet above establishes a real-time notification connection between the React application and Firebase.
 
 - It first imports the necessary modules for Firebase app initialization and message handling.
 - Then, it defines the Firebase project configuration with the unique API key, project ID, and other details.
@@ -345,7 +345,7 @@ If granted, it obtains the FCM token using the `getToken` function from the Fire
 
 Firebase Cloud Messaging relies on [service workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) to receive and handle notifications.
 
-Service workers are background scripts that run even when the browser window is closed or the app is not in the foreground.
+Service workers are background scripts that run even when the browser window is closed, or the app is not in the foreground.
 
 In the public folder of our React project, create a `firebase-messaging-sw.js` file with the following snippet:
 
@@ -436,7 +436,7 @@ The token is a device’s identifier, enabling Firebase to deliver targeted push
 1. Navigate to the Firebase console and access the [Messaging page]([https://console.firebase.google.com/project/_/messaging/?_gl=1*521hov*_ga*ODM4ODA3MjUuMTcxNTUxODk5Ng](https://console.firebase.google.com/project/_/messaging/?_gl=1*521hov*_ga*ODM4ODA3MjUuMTcxNTUxODk5Ng)..*_ga_CW55HF8NVT*MTcyNTExMzE2NS4xNC4xLjE3MjUxMTMyNjkuNjAuMC4w).
 2. Initiate a new campaign by selecting “**Create your first campaign**.”
 3. Choose “**Firebase Notification messages**” and proceed to create the notification.
-4. Compose a desired message; keep in mind that all other fields are optional.
+4. Compose a desired message; remember that all other fields are optional.
 
 ![https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1727083851676_Screenshot+2024-09-23+at+10.30.34.png](https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1727083851676_Screenshot+2024-09-23+at+10.30.34.png)
 
@@ -449,7 +449,7 @@ Finally, click the "**Test**" button to receive the notification.
 
 ![https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1727017269130_Screenshot+2024-09-22+at+15.57.57.png](https://paper-attachments.dropboxusercontent.com/s_6B83822E7270DCD852952C393CF7B5CD8EBEA49A91FB41938DC78AF986B3EDA6_1727017269130_Screenshot+2024-09-22+at+15.57.57.png)
 
-Notice that the notification object is logged to the console.
+So that you know, the notification object is logged into the console.
 
 This results from the configuration specified within the service worker file, which enables the capture and display of incoming notifications.
 
@@ -491,7 +491,7 @@ To demonstrate how Server-Sent Events (SSE) work, let's create a new file named 
     app.listen(PORT, () => console.log( `server running on port ${PORT}` ));
 ```
 
-The code snippet above utilizes Express to create an SSE endpoint at `/events` . The CORS middleware is configured to allow cross-origin requests from the specified origin `http://localhost:3000` .
+The code snippet above utilizes Express to create an SSE endpoint at `/events`. The CORS middleware is configured to allow cross-origin requests from the specified origin `http://localhost:3000`.
 
 The `app.get(’/events’, ...)` route handler sets the appropriate headers for SSE communication and establishes a persistent connection with the client.
 
@@ -776,7 +776,7 @@ Let’s discuss these factors in detail.
 
 Consider implementing [throttling or debouncing techniques](https://medium.com/@mujaffarhssn/debouncing-vs-throttling-optimizing-your-javascript-for-performance-a99d38f5eb3b) to prevent notification overload and enhance user experience.
 
-Throttling limits the rate at which notifications are sent, while debouncing delays them until user input is complete.
+Throttling limits the rate at which notifications are sent while debouncing delays them until user input is complete.
 
 Libraries like [Lodash](https://lodash.com/) can streamline the implementation of these techniques.
 
@@ -817,7 +817,7 @@ This section covers common problems we might encounter and provides strategies f
 
 - **Connection errors:** Check for network issues, firewall restrictions, or incorrect WebSocket URLs.
 - **Message parsing:** Ensure proper JSON parsing and handling of message data.
-- **Server-Side errors:** Debug server-side code for potential issues in handling connections or processing messages.
+- **Server-side errors:** Debug server-side code for potential issues handling connections or processing messages.
 
 ### Debugging Firebase errors
 
@@ -843,7 +843,7 @@ Employ robust authentication and authorization mechanisms to restrict access to 
 
 ### Authentication and authorization
 
-Enhance security by using token-based authentication methods, such as [JSON Web Token (JWT)](https://en.wikipedia.org/wiki/JSON_Web_Token), to protect server connections.
+To enhance security, protect server connections using token-based authentication methods, such as [JSON Web Token (JWT)](https://en.wikipedia.org/wiki/JSON_Web_Token).
 
 Also, role-based access control should be implemented to restrict notification access to authorized users, ensuring that only individuals with appropriate permissions can receive and view notifications.
 
@@ -861,7 +861,7 @@ Novu simplifies the implementation and management of real-time notifications, of
 
 We've also discussed optimization, user experience, and security best practices we can implement in your real-time app.
 
-To get started with Novu, [create a free account](https://dashboard.novu.co/auth/signup/?utm_campaign=real-time-notification) and join our developer community for expert support and guidance.
+To start with Novu, [create a free account](https://dashboard.novu.co/auth/signup/?utm_campaign=real-time-notification) and join our developer community for expert support and guidance.
 
 ---
 
