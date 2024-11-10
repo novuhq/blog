@@ -69,7 +69,7 @@ Push notification services can improve cross-platform reach, enhance personaliza
 2. **Enhanced personalization:** Push notification services allow for personalized messaging based on user data, ensuring the content is relevant and tailored to individual preferences. If done right, they can increase customer retention.
 3. **Analytics provision**: Push notification services allow monitoring click and open rates, providing analysts with valuable insights to optimize the timing, delivery, and effectiveness of notifications.
 
-Now let’s consider the critical components of push notification services.
+Now, let’s consider the critical components of push notification services.
 
 ## Key components of push notification services
 
@@ -184,7 +184,7 @@ To set up a push notification provider with Novu, here are the key steps:
 
 ### Setup an account
 
-Novu offers free, enterprise, and business account plans. 
+Novu offers free enterprise and business account plans. 
 
 To begin, create a [free account](https://dashboard.novu.co/auth/signup?utm_campaign=notification-services).
 
@@ -210,7 +210,7 @@ To enable push notifications, you'll need to set up the necessary authentication
 
    For Firebase (FCM):
 
-     - Generate a server key from Firebase Console
+     - Generate a server key from the Firebase Console
      - Obtain your FCM Sender ID
 
      Learn more about [Firebase setup](https://docs.novu.co/integrations/providers/push/firebase?utm_campaign=notification-services).
@@ -320,7 +320,7 @@ Create [reusable templates](https://docs.novu.co/community/add-a-new-provider#te
 
 * **Multi-language content management:** For applications with a global user base, localize notifications and deliver them in the user’s language.
 
-Now that the notification provider is implemented and configured, let’s explore some best practices for using and choosing push notification services.
+Now that the notification provider is implemented and configured let’s explore some best practices for using and choosing push notification services.
 
 ## Best practices for push notification provider services
 
@@ -344,7 +344,7 @@ This helps identify and address potential bottlenecks that could affect users.
 
 ### Personalization and targeting
 
-Personalized and targeted notifications are more likely to engage users and drive action. Implement A/B testing to determine which types of notifications resonate best with different segments of your target audience and continuously refine this targeting strategy based on the results to improve engagement rates.
+Personalized and targeted notifications are more likely to engage users and drive action. You can implement A/B testing to determine which types of notifications resonate best with different segments of your target audience and continuously refine this targeting strategy based on the results to improve engagement rates.
 
 ### Security considerations
 
