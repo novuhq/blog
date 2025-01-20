@@ -1,0 +1,858 @@
+repo_name: novuhq/blog
+report_id: 315753cea2b681e00d72d2f26a253a6f
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-29T18:06:21+00:00'
+requested_by: dha-stix
+provider: github
+branch: main
+detected_tools_count: 62
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/novuhq/blog
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/novuhq/blog
+  detection_source: Repo Metadata
+- name: Python
+  description: A clear and powerful object-oriented programming language, comparable
+    to Perl, Ruby, Scheme, or Java.
+  website_url: https://www.python.org
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source_url: https://github.com/novuhq/blog
+  detection_source: Repo Metadata
+- name: TypeScript
+  description: A superset of JavaScript that compiles to clean JavaScript output
+  website_url: http://www.typescriptlang.org
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source_url: https://github.com/novuhq/blog
+  detection_source: Repo Metadata
+- name: Autoprefixer
+  description: PostCSS plugin to parse CSS and add vendor prefixes to CSS rules
+  website_url: https://github.com/postcss/autoprefixer
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: CSS Pre-processors / Extensions
+  image_url: https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/bidding-new/package.json
+  detection_source: bidding-new/package.json
+  last_updated_by: Nevo David
+  last_updated_on: 2023-05-23 10:59:13.000000000 Z
+- name: ExpressJS
+  description: Sinatra inspired web development framework for node.js -- insanely
+    fast, flexible, and simple
+  website_url: http://expressjs.com/
+  version: 4.18.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Microframeworks (Backend)
+  image_url: https://img.stackshare.io/service/1163/hashtag.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: 2FA-with-react-nodejs-and-novu/server/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-10-31 15:48:44.000000000 Z
+- name: Next.js
+  description: A small framework for server-rendered universal JavaScript apps
+  website_url: https://nextjs.org/
+  version: 13.4.2
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/5936/nextjs.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/bidding-new/package-lock.json
+  detection_source: bidding-new/package.json
+  last_updated_by: Nevo David
+  last_updated_on: 2023-05-23 10:59:13.000000000 Z
+- name: Node.js
+  description: A platform built on Chrome's JavaScript runtime for easily building
+    fast, scalable network applications
+  website_url: http://nodejs.org/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/bidding-new/package.json
+  detection_source: bidding-new/package.json
+  last_updated_by: Nevo David
+  last_updated_on: 2023-05-23 10:59:13.000000000 Z
+- name: React
+  description: A JavaScript library for building user interfaces
+  website_url: https://reactjs.org/
+  version: 18.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript UI Libraries
+  image_url: https://img.stackshare.io/service/1020/OYIaJ1KK.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: 2FA-with-react-nodejs-and-novu/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-10-31 15:48:44.000000000 Z
+- name: React Native
+  description: A framework for building native apps with React
+  website_url: http://facebook.github.io/
+  version: 0.70.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Cross-Platform Mobile Development
+  image_url: https://img.stackshare.io/service/2699/KoK6gHzp.jpg
+  detection_source_url: https://github.com/novuhq/blog/blob/main/bidding-app-with-reactnative/app/package-lock.json
+  detection_source: bidding-app-with-reactnative/app/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-11-14 04:03:56.000000000 Z
+- name: React Router
+  description: A complete routing solution for React.js
+  website_url: https://github.com/rackt/react-router
+  version: 6.4.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: JavaScript Framework Components
+  image_url: https://img.stackshare.io/service/3350/8261421.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: 2FA-with-react-nodejs-and-novu/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-10-31 15:48:44.000000000 Z
+- name: Redux
+  description: Predictable state container for JavaScript apps
+  website_url: https://redux.js.org/
+  version: 4.2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: State Management Library
+  image_url: https://img.stackshare.io/service/4074/13142323.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/blogging-platform-with-react-socketIO/client/package-lock.json
+  detection_source: email-outreach-with-reactflow-and-resend/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2023-07-24 10:46:05.000000000 Z
+- name: react-beautiful-dnd
+  description: Beautiful and accessible drag and drop for lists with React (by Atlassian)
+  website_url: https://github.com/atlassian/react-beautiful-dnd
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: JavaScript Framework Components
+  image_url: https://img.stackshare.io/service/9878/react-beautiful-dnd-logo.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/react-beautiful-dnd-todo-list/client/package.json
+  detection_source: react-beautiful-dnd-todo-list/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-09-17 15:27:22.000000000 Z
+- name: Firebase
+  description: The Realtime App Platform
+  website_url: https://firebase.google.com/
+  open_source: false
+  hosted_saas: true
+  category: Application Hosting
+  sub_category: Realtime Backend / API
+  image_url: https://img.stackshare.io/service/116/cZLxNFZS.jpg
+  detection_source_url: https://github.com/novuhq/blog/blob/main/event-scheduler-with-push-notifications/client/package.json
+  detection_source: event-scheduler-with-push-notifications/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-09-04 23:22:18.000000000 Z
+- name: Socket.IO
+  description: Realtime application framework (Node.JS server)
+  website_url: http://socket.io/
+  version: 4.5.1
+  open_source: true
+  hosted_saas: false
+  category: Application Hosting
+  sub_category: Realtime Backend / API
+  image_url: https://img.stackshare.io/service/1161/vI0ZZlhZ_400x400.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/bidding system using
+    socketIO/server/package-lock.json
+  detection_source: bidding system using socketIO/client/package.json
+  last_updated_by: dha-stix
+  last_updated_on: 2022-07-27 00:54:55.000000000 Z
+- name: Babel
+  description: Use next generation JavaScript, today.
+  website_url: http://babeljs.io/
+  version: 7.18.10
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JavaScript Compilers
+  image_url: https://img.stackshare.io/service/2739/-1wfGjNw.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: bidding-app-with-reactnative/app/babel.config.js
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-11-14 04:03:56.000000000 Z
+- name: Dotenv
+  description: Loads environment variables from .env for Nodejs projects
+  website_url: https://github.com/motdotla/dotenv
+  license: BSD-2-Clause
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Server Configuration and Automation
+  image_url: https://img.stackshare.io/service/8067/default_90dcb1286af7685c68df319c764b80704df1155b.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/server/package.json
+  detection_source: 2FA-with-react-nodejs-and-novu/server/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-10-31 15:48:44.000000000 Z
+- name: ESLint
+  description: The fully pluggable JavaScript code quality tool
+  website_url: http://eslint.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source_url: https://github.com/novuhq/blog/blob/main/bidding-new/package.json
+  detection_source: bidding-new/package.json
+  last_updated_by: Nevo David
+  last_updated_on: 2023-05-23 10:59:13.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/novuhq/blog
+  detection_source: Repo Metadata
+- name: Octokit
+  description: GitHub API Client Library for .NET
+  website_url: https://github.com/octokit/octokit.net
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Tools for GitHub
+  image_url: https://img.stackshare.io/service/9827/octokit-dotnet_2.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/contributor-of-the-month/package.json
+  detection_source: contributor-of-the-month/package.json
+  last_updated_by: Nevo David
+  last_updated_on: 2023-03-19 09:24:17.000000000 Z
+- name: Prettier
+  description: Prettier is an opinionated code formatter.
+  website_url: https://prettier.io/
+  version: 2.8.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg
+  detection_source_url: https://github.com/novuhq/blog/blob/main/contributor-of-the-month/package-lock.json
+  detection_source: contributor-of-the-month/package.json
+  last_updated_by: Nevo David
+  last_updated_on: 2023-03-19 09:24:17.000000000 Z
+- name: Yarn
+  description: A new package manager for JavaScript
+  website_url: https://yarnpkg.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/5848/44mC-kJ3.jpg
+  detection_source_url: https://github.com/novuhq/blog/blob/main/build-todolist-with-reactnative/app/yarn.lock
+  detection_source: build-todolist-with-reactnative/app/yarn.lock
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-11-20 01:55:10.000000000 Z
+- name: nodemon
+  description: A simple monitor script for use during development of a node.js app
+  website_url: http://nodemon.io/
+  version: 2.0.20
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Monitoring
+  sub_category: node.js Application Monitoring
+  image_url: https://img.stackshare.io/service/5577/preview.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/server/package-lock.json
+  detection_source: 2FA-with-react-nodejs-and-novu/server/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-10-31 15:48:44.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/upvote-app-with-react-and-nodejs/client/package.json
+  detection_source: upvote-app-with-react-and-nodejs/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-12-03 11:42:46.000000000 Z
+- name: Twilio
+  description: Bring voice and messaging to your web and mobile applications.
+  website_url: http://www.twilio.com
+  open_source: false
+  hosted_saas: true
+  category: Communications
+  sub_category: Voice and SMS
+  image_url: https://img.stackshare.io/service/130/VrwpNfjh_400x400.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/sending SMS via Twilio/package.json
+  detection_source: sending SMS via Twilio/package.json
+  last_updated_by: dha-stix
+  last_updated_on: 2022-07-11 06:35:19.000000000 Z
+- name: Moment.js
+  description: A JavaScript date library for parsing, validating, manipulating, and
+    formatting dates
+  website_url: http://momentjs.com/
+  version: 2.29.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript Utilities & Libraries
+  image_url: https://img.stackshare.io/service/3643/Xrtdc94q_400x400.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/contributor-of-the-month/package-lock.json
+  detection_source: contributor-of-the-month/package.json
+  last_updated_by: Nevo David
+  last_updated_on: 2023-03-19 09:24:17.000000000 Z
+- name: Shell
+  description: A shell is a text-based terminal, used for manipulating programs and
+    files. Shell scripts typically manage program execution.
+  website_url: https://en.wikipedia.org/wiki/Shell_script
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/novuhq/blog
+  detection_source: Repo Metadata
+- name: axios
+  description: Promise based HTTP client for the browser and node.js
+  website_url: https://github.com/mzabriskie/axios
+  version: 0.26.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript Utilities & Libraries
+  image_url: https://img.stackshare.io/no-img-open-source.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/server/package-lock.json
+  detection_source: cold-emailing-with-react-ai/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2023-03-04 07:17:14.000000000 Z
+- name: "@babel/core"
+  description: Babel compiler core
+  package_url: https://www.npmjs.com/@babel/core
+  version: 7.18.10
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15810/default_004658cda9b38934f2871435e9dc15608c86e8be.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: bidding-app-with-reactnative/app/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-11-14 04:03:56.000000000 Z
+- name: "@octokit/rest"
+  description: GitHub REST API client for Node.js
+  package_url: https://www.npmjs.com/@octokit/rest
+  version: 19.0.7
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16999/default_43f23668e39c9b3381720c9c76540776b8a49167.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/contributor-of-the-month/package-lock.json
+  detection_source: contributor-of-the-month/package.json
+  last_updated_by: Nevo David
+  last_updated_on: 2023-03-19 09:24:17.000000000 Z
+- name: "@testing-library/jest-dom"
+  description: Custom jest matchers to test the state of the DOM
+  package_url: https://www.npmjs.com/@testing-library/jest-dom
+  version: 5.16.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17424/default_1cdcda15ebb7caed879f8340bc212b44c4ec9dac.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: 2FA-with-react-nodejs-and-novu/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-10-31 15:48:44.000000000 Z
+- name: "@testing-library/react"
+  description: Simple and complete React DOM testing utilities that encourage good
+    testing practices
+  package_url: https://www.npmjs.com/@testing-library/react
+  version: 13.3.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16549/default_d522554c6a41cb28d922d6d3ad32ad4afa0e3bb5.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: 2FA-with-react-nodejs-and-novu/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-10-31 15:48:44.000000000 Z
+- name: "@types/express"
+  description: TypeScript definitions for Express
+  package_url: https://www.npmjs.com/@types/express
+  version: 4.17.13
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16100/default_d947c1690e032a288145c7e2491999eab3ea8ede.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: sending-messages-to-discord-bot/package.json
+  last_updated_by: dha-stix
+  last_updated_on: 2022-07-11 06:35:19.000000000 Z
+- name: "@types/moment"
+  description: Stub TypeScript definitions entry for Moment
+  package_url: https://www.npmjs.com/@types/moment
+  version: 2.13.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17826/default_dc034f75f103514d23b4d1a7fe578415d63216ee.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/contributor-of-the-month/package-lock.json
+  detection_source: contributor-of-the-month/package.json
+  last_updated_by: Nevo David
+  last_updated_on: 2023-03-19 09:24:17.000000000 Z
+- name: "@types/node"
+  description: TypeScript definitions for Node.js
+  package_url: https://www.npmjs.com/@types/node
+  version: 18.7.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15809/default_5e5e8ac63beda29f31f1844df64d4b8247570a66.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: bidding-new/package.json
+  last_updated_by: Nevo David
+  last_updated_on: 2023-05-23 10:59:13.000000000 Z
+- name: "@types/react"
+  description: TypeScript definitions for React
+  package_url: https://www.npmjs.com/@types/react
+  version: 18.0.17
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15894/default_1d65e37e65b7f80761374f0202776043277d505d.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: bidding-new/package.json
+  last_updated_by: Nevo David
+  last_updated_on: 2023-05-23 10:59:13.000000000 Z
+- name: "@types/react-dom"
+  description: TypeScript definitions for React
+  package_url: https://www.npmjs.com/@types/react-dom
+  version: 18.0.6
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15946/default_54b691c123fc8979741e800e4dcd3936c0f3b246.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: bidding-new/package.json
+  last_updated_by: Nevo David
+  last_updated_on: 2023-05-23 10:59:13.000000000 Z
+- name: concurrently
+  description: Run commands concurrently
+  package_url: https://www.npmjs.com/concurrently
+  version: 7.2.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16041/default_5fd43aeff4d6a935abc13737de01a0355210499d.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/sending-messages-to-discord-bot/package-lock.json
+  detection_source: sending-messages-to-discord-bot/package.json
+  last_updated_by: dha-stix
+  last_updated_on: 2022-07-11 06:35:19.000000000 Z
+- name: cors
+  description: Node.js CORS middleware
+  package_url: https://www.npmjs.com/cors
+  version: 2.8.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16165/default_41f04716a804e853d5c38a5b81ee0ea8a842ad82.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/server/package-lock.json
+  detection_source: 2FA-with-react-nodejs-and-novu/server/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-10-31 15:48:44.000000000 Z
+- name: discord.js
+  description: A powerful library for interacting with the Discord API
+  package_url: https://www.npmjs.com/discord.js
+  version: 14.13.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16866/default_21db97bdb9f4092d80f256d3afec4658fbafe443.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/meme-discord-bot-with-novu-reddit/package-lock.json
+  detection_source: sending-messages-to-discord-bot/package.json
+  last_updated_by: dha-stix
+  last_updated_on: 2022-07-11 06:35:19.000000000 Z
+- name: eslint-plugin-react
+  description: React specific linting rules for ESLint
+  package_url: https://www.npmjs.com/eslint-plugin-react
+  version: 7.30.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15817/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: chat-app-with-websockets-novel/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2023-09-03 06:15:27.000000000 Z
+- name: eslint-plugin-react-hooks
+  description: ESLint rules for React Hooks
+  package_url: https://www.npmjs.com/eslint-plugin-react-hooks
+  version: 4.6.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16149/default_1f3a2fc7d882e29a43394ecdf491b8989ea3f0fa.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: chat-app-with-websockets-novel/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2023-09-03 06:15:27.000000000 Z
+- name: expo
+  description: The Expo SDK
+  package_url: https://www.npmjs.com/expo
+  version: 47.0.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17801/default_78858facb60c08d15198eb69a6c7f48463f2c09f.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/bidding-app-with-reactnative/app/package-lock.json
+  detection_source: bidding-app-with-reactnative/app/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-11-14 04:03:56.000000000 Z
+- name: express
+  description: Fast, unopinionated, minimalist web framework
+  package_url: https://www.npmjs.com/express
+  version: 4.18.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15818/default_db4a7791d2f1174547374b9b587bc10fec088a5a.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: 2FA-with-react-nodejs-and-novu/server/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-10-31 15:48:44.000000000 Z
+- name: fast-xml-parser
+  description: Validate XML or Parse XML to JS/JSON very fast without C/C++ based
+    libraries
+  package_url: https://www.npmjs.com/fast-xml-parser
+  version: 4.2.7
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/18585/default_8f927dfbacb5114543043eda4a41364f4f47ff2c.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/meme-discord-bot-with-novu-reddit/package-lock.json
+  detection_source: meme-discord-bot-with-novu-reddit/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2023-08-19 15:21:21.000000000 Z
+- name: moment
+  description: Parse, validate, manipulate, and display dates
+  package_url: https://www.npmjs.com/moment
+  version: 2.29.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15847/default_4479dbac220be99e50e724b2df6cf415241d71fd.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/contributor-of-the-month/package-lock.json
+  detection_source: contributor-of-the-month/package.json
+  last_updated_by: Nevo David
+  last_updated_on: 2023-03-19 09:24:17.000000000 Z
+- name: multer
+  description: Middleware for handling `multipart/form-data`
+  package_url: https://www.npmjs.com/multer
+  version: 1.4.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16421/default_23e0dabcd0197f0c1f0a41268f8ca3f7e8b1f1e2.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/cold-emailing-with-react-ai/server/package-lock.json
+  detection_source: cold-emailing-with-react-ai/server/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2023-03-04 07:17:14.000000000 Z
+- name: node-schedule
+  description: A cron-like and not-cron-like job scheduler for Node
+  package_url: https://www.npmjs.com/node-schedule
+  version: 2.1.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17126/default_0ffbf6d9ee2940fe94be8424fd9afff068fff458.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/contributor-of-the-month/package-lock.json
+  detection_source: contributor-of-the-month/package.json
+  last_updated_by: Nevo David
+  last_updated_on: 2023-03-19 09:26:33.000000000 Z
+- name: nodemailer
+  description: Easy as cake e-mail sending from your Node.js applications
+  package_url: https://www.npmjs.com/nodemailer
+  version: 6.9.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16278/default_9924e5da1d50ea01e52b48e4fae4b1347af5e4ff.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/meetup-clone-react-supertokens-nodejs/server/package-lock.json
+  detection_source: sending-emails-via-Nodemailer/package.json
+  last_updated_by: dha-stix
+  last_updated_on: 2022-07-11 06:43:01.000000000 Z
+  vulnerabilities:
+  - name: nodemailer ReDoS when trying to send a specially crafted email
+    cve_id: 
+    cve_url: https://github.com/advisories/GHSA-9h6g-pr28-7cqp
+    detected_date: Feb 1
+    severity: moderate
+    first_patched: 6.9.9
+- name: postcss
+  description: Tool for transforming styles with JS plugins
+  package_url: https://www.npmjs.com/postcss
+  version: 8.4.16
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16012/default_7a88bebb451873cc63bd99007de5bd3bb8ef85de.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: bidding-new/package.json
+  last_updated_by: Nevo David
+  last_updated_on: 2023-05-23 10:59:13.000000000 Z
+  vulnerabilities:
+  - name: PostCSS line return parsing error
+    cve_id: CVE-2023-44270
+    cve_url: https://github.com/advisories/GHSA-7fh5-64p2-3v2j
+    detected_date: Oct 4
+    severity: moderate
+    first_patched: 8.4.31
+- name: puppeteer
+  description: A high-level API to control headless Chrome over the DevTools Protocol
+  package_url: https://www.npmjs.com/puppeteer
+  version: 19.6.3
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16134/default_73326c44fbfa7369fd17573edb113e5d849468bc.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/resume-builder-with-react-chatgpt-nodejs/server/package-lock.json
+  detection_source: resume-builder-with-react-chatgpt-nodejs/server/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2023-02-08 12:04:26.000000000 Z
+- name: react-copy-to-clipboard
+  description: Copy-to-clipboard React component
+  package_url: https://www.npmjs.com/react-copy-to-clipboard
+  version: 5.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17254/default_9aa9c9d4e491c9d2d70df74bfa33cf525babb7f5.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/upvote-app-with-react-and-nodejs/client/package-lock.json
+  detection_source: upvote-app-with-react-and-nodejs/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-12-03 20:11:23.000000000 Z
+- name: react-datepicker
+  description: A simple and reusable datepicker component for React
+  package_url: https://www.npmjs.com/react-datepicker
+  version: 4.8.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17239/default_183829c5079b84333a720d8590a328efc043ba0e.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/scheduling-app-with-react-nodejs-emailjs/client/package-lock.json
+  detection_source: scheduling-app-with-react-nodejs-emailjs/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-12-12 16:23:43.000000000 Z
+- name: react-dom
+  description: React package for working with the DOM
+  package_url: https://www.npmjs.com/react-dom
+  version: 18.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15808/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: 2FA-with-react-nodejs-and-novu/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-10-31 15:48:44.000000000 Z
+- name: react-icons
+  description: SVG React icons of popular icon packs using ES6 imports
+  package_url: https://www.npmjs.com/react-icons
+  version: 4.10.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16909/default_7b9968788548874538c601457e8dcd9c74bd2051.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/hanko-auth-blog-with-novu/client/package-lock.json
+  detection_source: hanko-auth-blog-with-novu/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2023-07-31 16:40:39.000000000 Z
+- name: react-native
+  description: A framework for building native apps using React
+  package_url: https://www.npmjs.com/react-native
+  version: 0.70.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16064/default_5a461d436012a0c4024534aaba303dcdb0297d24.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/bidding-app-with-reactnative/app/package-lock.json
+  detection_source: bidding-app-with-reactnative/app/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-11-14 04:03:56.000000000 Z
+- name: react-redux
+  description: Official React bindings for Redux
+  package_url: https://www.npmjs.com/react-redux
+  version: 8.1.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15984/default_f49d4c116f8ea0155f4d92673b084378bba02760.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/email-outreach-with-reactflow-and-resend/package-lock.json
+  detection_source: email-outreach-with-reactflow-and-resend/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2023-07-24 10:46:05.000000000 Z
+- name: react-router-dom
+  description: DOM bindings for React Router
+  package_url: https://www.npmjs.com/react-router-dom
+  version: 6.4.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16025/default_e25d1fbb04a118c79fb444294461417342bd03bf.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: 2FA-with-react-nodejs-and-novu/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-10-31 15:48:44.000000000 Z
+- name: react-scripts
+  description: Configuration and scripts for Create React App
+  package_url: https://www.npmjs.com/react-scripts
+  version: 5.0.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15985/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: 2FA-with-react-nodejs-and-novu/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-10-31 15:48:44.000000000 Z
+- name: react-toastify
+  description: React notification made easy
+  package_url: https://www.npmjs.com/react-toastify
+  version: 9.0.8
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/18461/default_5ff724c0ff89bb42698aa80ef3403008cb0d8f72.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/event-scheduler-with-push-notifications/client/package-lock.json
+  detection_source: event-scheduler-with-push-notifications/client/package.json
+  last_updated_by: David Asaolu
+  last_updated_on: 2022-09-04 23:22:18.000000000 Z
+- name: socket.io-client
+  description: "[![Build Status]"
+  package_url: https://www.npmjs.com/socket.io-client
+  version: 4.5.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16164/default_ac04a744873b460c4ef30a7450ed0c83223640ab.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/bidding system using
+    socketIO/client/package-lock.json
+  detection_source: bidding system using socketIO/client/package.json
+  last_updated_by: dha-stix
+  last_updated_on: 2022-07-27 00:54:55.000000000 Z
+- name: tailwindcss
+  description: A utility-first CSS framework for rapidly building custom user interfaces
+  package_url: https://www.npmjs.com/tailwindcss
+  version: 3.1.8
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17398/default_2cd7ed1c123f2fca074a6f4b16c4e73d5bfe82be.png
+  detection_source_url: https://github.com/novuhq/blog/blob/main/2FA-with-react-nodejs-and-novu/client/package-lock.json
+  detection_source: bidding-new/package.json
+  last_updated_by: Nevo David
+  last_updated_on: 2023-05-23 10:59:13.000000000 Z
