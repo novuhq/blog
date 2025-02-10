@@ -4,7 +4,7 @@ Over the past week, we've rolled out some of the most requested features to make
 
 Whether you're improving your workflow organization, streamlining development, or customizing notifications dynamically, there's something for everyone in this feature-packed update.
 
-![Winter Season Launch Week](./assets/main-cover.png)
+![Winter Season Launch Week](https://github.com/novuhq/blog/blob/main/2025/feb/winter-season-launch-week/assets/main-cover.png?raw=true)
 
 ---
 
@@ -14,7 +14,7 @@ Managing notifications across environments can be complex, but it's essential fo
 
 Novu's **Multi-Environment Support** introduces a structured, secure, and efficient way to handle your notification workflows at every stage—from development to production.
 
-![Multi-Environment Support](./assets/multi-env.png)
+![Multi-Environment Support](https://github.com/novuhq/blog/blob/main/2025/feb/winter-season-launch-week/assets/multi-env.png?raw=true)
 
 ### **Key Capabilities**
 
@@ -33,7 +33,7 @@ Building notification workflows from scratch can be repetitive.
 
 The **Novu Workflow Template Store** provides a library of pre-built, standardized notification workflows for use cases like **account security**, **user engagement**, **transactional updates**, and **system alerts**.
 
-![Template Store](./assets/template-store.png)
+![Template Store](https://github.com/novuhq/blog/blob/main/2025/feb/winter-season-launch-week/assets/template-store.png?raw=true)
 
 ### **Why Use Workflow Templates?**
 
@@ -52,7 +52,7 @@ The **Variable Popover** makes dynamic content creation in Novu's dashboard effo
 
 Now, you can **pick, configure, and preview variables directly in the UI**.
 
-![Variable Popover](./assets/variable-popover.png)
+![Variable Popover](https://github.com/novuhq/blog/blob/main/2025/feb/winter-season-launch-week/assets/variable-popover.png?raw=true)
 
 ### **Key Benefits**
 
@@ -69,7 +69,7 @@ Now, you can **pick, configure, and preview variables directly in the UI**.
 
 We’re excited to introduce **official Novu SDKs** for **TypeScript, Python, Go, and PHP**! These SDKs make it seamless to integrate **enterprise-grade notifications** into any application.
 
-![Auto-Genarated SDKs](./assets/sdks.png)
+![Auto-Genarated SDKs](https://github.com/novuhq/blog/blob/main/2025/feb/winter-season-launch-week/assets/sdks.png?raw=true)
 
 ### **What’s New?**
 
@@ -91,7 +91,7 @@ We’re excited to introduce **official Novu SDKs** for **TypeScript, Python, Go
 
 **Step Conditions** bring full customization to your workflows, enabling notifications to be triggered based on **subscriber data**, **payload information**, and **previous step outcomes**.
 
-![Step Conditions](./assets/step-conditions.png)
+![Step Conditions](https://github.com/novuhq/blog/blob/main/2025/feb/winter-season-launch-week/assets/step-conditions.png?raw=true)
 
 ### **Key Features**
 
