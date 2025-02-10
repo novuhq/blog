@@ -111,4 +111,4 @@ These updates are just the beginning! We’re continuously improving Novu to pro
 
 Stay tuned for even more enhancements, and let us know what features you’d love to see next.
 
-🚀 **Get started today and take your notification workflows to the next level!**
+🚀 [**Get started today and take your notification workflows to the next level!**](https://go.novu.co/dashboard?utm_campaign=winter-season-lw?utm_source=novublog)
