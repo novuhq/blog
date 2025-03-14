@@ -2,4 +2,4 @@
 
 ## Run npm install in both folders to install all their dependencies.
 
-## Start both servers using npm start
+## Start both servers using npm startt
